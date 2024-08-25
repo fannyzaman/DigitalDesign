@@ -1,0 +1,172 @@
+body {
+  font-family: 'Inconsolata', sans-serif;
+  color: #090809;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  display: inline-block;
+  font-weight: 300;
+}
+
+.links {
+  display: inline-block;
+}
+
+.links li {
+  display: inline-block;
+}
+
+.links a {
+  color: #090809;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0 8px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  padding: 10px 32px;
+  height: 100px;
+  box-sizing: border-box;
+}
+
+a.active {
+  border-bottom: 1px solid black;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 10px;
+  padding: 10px;
+  margin-top: 110px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0px;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.card a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 360px;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-slide .slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden; /* Ensures no scrollbars on the slide */
+}
+
+.carousel-slide .slide.active {
+  display: flex;
+}
+
+.carousel-slide img {
+  width: 72%;
+  height: auto;
+}
+
+.embedded-page {
+  width: 100%;
+  height: 100%;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  pointer-events: none;
+  box-sizing: border-box;
+  transform: scale(0.8); /* Scale down the iframe to 80% of its original size */
+  
+}
+
+.carousel-slide h3,
+.carousel-slide h4 {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.carousel-dots .dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+  background-color: #717171;
+}
+
+.card h2 {
+  font-size: 48px;
+  font-weight: 300;
+  margin: 10px 0 0 0;
+  padding-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 36px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.card h4 {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 10px 0 0 0;
+  padding-bottom: 10px;
+}
