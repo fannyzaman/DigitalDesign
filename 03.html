@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://use.typekit.net/wie2pgd.css">
+    <link rel="stylesheet" href="CSS/03.css" /> <!-- link hier je css file -->
+</head>
+<body>
+
+    <header class="navbar">
+        <h1>Graphic Design | Fanny Zaman</h1>
+        <nav class="links">
+            <ul>
+            <li><a href="index.html">Work</a></li>
+            <li><a class="active" href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+      <section class="grid-container">
+      <!-- Left Column: Text Content -->
+       <div class="card text-card">
+        <div>
+      <h1>DeCeNTRaLiZiNG ReaLiTy</h1>
+      <h3><p>Navigating the Symbolic Landscape of Consensus</p>
+        <p>DeCeNTRaLiZiNG ReaLiTy is interactive graphic web novel by Fanny Zaman conceived in the context of the ARTeCHO fellowship March - November 2023</p></h3>
+      </div>
+      </div>
+      
+          <!-- Right Column: Carousel of Images -->
+          <div class="card carousel-card">
+            <div class="carousel-container" id="carousel-1">
+              <div class="carousel-slide">
+              <div class="slide">
+                <img src="Works/DN/City_Custom..._24-11-2023_16-28-01-01.webp" alt="Image 1">
+              </div>
+            <div class="slide">
+              <img src="Works/DN/F.D._2_Custom..._18-01-2024_11-24-23-01.webp" alt="Image 2">
+            </div>
+
+            </div>
+          </div>
+            <div class="carousel-dots" data-carousel="1">
+                <span class="dot active" onclick="currentSlide(1,0)"></span> <!-- Adjust index here -->
+                <span class="dot active" onclick="currentSlide(2, 0)"></span>
+            </div>
+        </div>
+
+        <div class="card text-card">
+            <div>
+          <h2></h2>
+
+          </div>
+          </div>
+          
+              <!-- Right Column: Carousel of Images -->
+              <div class="card carousel-card">
+                <div class="carousel-container" id="carousel-2">
+                  <div class="carousel-slide">
+                  <div class="slide">
+                        <img src="Works/DN/RIOT_4_Custom..._03-01-2024_11-03-08-01.webp" alt="Image 1">
+                      </div>
+                      <div class="slide">
+                        <img src="Works/DN/F.D._2_Custom..._18-01-2024_11-23-02-01.webp" alt="Image 2">
+                      </div>
+                </div>
+              </div>
+                <div class="carousel-dots" data-carousel="2">
+                    <span class="dot active" onclick="currentSlide(1,1)"></span> <!-- Adjust index here -->
+                    <span class="dot active" onclick="currentSlide(2, 1)"></span>
+                </div>
+            </div>
+        </section>
+
+        <script src="JS/carousel.js"></script>
+      </body>
+      </html>

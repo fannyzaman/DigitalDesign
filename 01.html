@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://use.typekit.net/wie2pgd.css">
+    <link rel="stylesheet" href="CSS/01.css" /> <!-- link hier je css file -->
+</head>
+<body>
+
+    <header class="navbar">
+        <h1>Graphic Design | Fanny Zaman</h1>
+        <nav class="links">
+            <ul>
+            <li><a href="index.html">Work</a></li>
+            <li><a class="active" href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+      <section class="grid-container">
+            
+      
+      <div class="card carousel-card">
+        <div class="carousel-container" id="carousel-1">
+          <div class="carousel-slide">
+            <div class="slide">
+                <img src="Works/avatar/avatar04+_Tekengebied 1.webp" alt="Image 1">
+              </div>
+            <div class="slide">
+              <img src="Works/avatar/avatar2_Tekengebied 1.webp" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="Works/avatar/avatar06+_Tekengebied 1.webp" alt="Image 3">
+              </div>
+            </div>
+          </div>
+            <div class="carousel-dots" data-carousel="1">
+                <span class="dot active" onclick="currentSlide(1, 0)"></span> <!-- Adjust index here -->
+                <span class="dot active" onclick="currentSlide(2, 0)"></span>
+                <span class="dot active" onclick="currentSlide(3, 0)"></span>
+            </div>
+        </div>
+
+        <div class="card carousel-card">
+          <div class="carousel-container" id="carousel-2">
+            <div class="carousel-slide">
+                <div class="slide">
+                  <img src="Works/avatar/avatar1_Tekengebied 1.webp" alt="Image 1">
+                </div>
+                <div class="slide">
+                  <img src="Works/avatar/helm_meisje_Tekengebied 1.webp" alt="Image 2">
+                </div>
+              </div>
+            </div>
+              <div class="carousel-dots" data-carousel="2">
+                  <span class="dot active" onclick="currentSlide(1, 1)"></span> <!-- Adjust index here -->
+                  <span class="dot active" onclick="currentSlide(2, 1)"></span>
+              </div>
+          </div>
+
+        
+
+
+           
+        <div class="card carousel-card">
+              <div class="carousel-container" id="carousel-3">
+                <div class="carousel-slide">
+                <div class="slide">
+                  <img src="Works/illustraties/mobile_Tekengebied 1.webp" alt="Image 1">
+                </div>
+                <div class="slide">
+                  <img src="Works/illustraties/smartphone02+_Tekengebied 1.webp" alt="Image 1">
+                </div>
+                <div class="slide">
+                  <img src="Works/illustraties/meisje_happer_Tekengebied 1.webp" alt="Image 3">
+                </div>
+              </div>
+            </div>
+              <div class="carousel-dots" data-carousel="3">
+                  <span class="dot active" onclick="currentSlide(1, 2)"></span> <!-- Adjust index here -->
+                  <span class="dot active" onclick="currentSlide(2, 2)"></span>
+                  <span class="dot active" onclick="currentSlide(3, 2)"></span>
+              </div>
+          </div>
+
+          <div class="card carousel-card">
+            <div class="carousel-container" id="carousel-4">
+              <div class="carousel-slide">
+                <div class="slide">
+                  <img src="Works/illustraties/handtest_Tekengebied 1.webp" alt="Image 2">
+                </div>
+
+              <div class="slide">
+                <img src="Works/illustraties/meisje2.1_Tekengebied 1.webp" alt="Image 2">
+              </div>
+              <div class="slide">
+                <img src="Works/illustraties/waarzegger_Tekengebied 1.webp" alt="Image 3">
+              </div>
+            </div>
+          </div>
+            <div class="carousel-dots" data-carousel="4">
+                <span class="dot active" onclick="currentSlide(1, 3)"></span> <!-- Adjust index here -->
+                <span class="dot active" onclick="currentSlide(2, 3)"></span>
+                <span class="dot active" onclick="currentSlide(3, 3)"></span>
+
+            </div>
+        </div>
+
+          
+              
+              <div class="card carousel-card">
+                <div class="carousel-container" id="carousel-5">
+                  <div class="carousel-slide">
+                  <div class="slide">
+                    <img src="Works/pie/cak06_Tekengebied 1.webp" alt="Image 1">
+                  </div>
+                  <div class="slide">
+                    <img src="Works/pie/cake01_Tekengebied 1.webp" alt="Image 2">
+                  </div>
+                  <div class="slide">
+                    <img src="Works/pie/cake2_Tekengebied 1.webp" alt="Image 3">
+                  </div>
+                  </div>
+                </div>
+                <div class="carousel-dots" data-carousel="5">
+                    <span class="dot active" onclick="currentSlide(1, 4)"></span> <!-- Adjust index here -->
+                    <span class="dot active" onclick="currentSlide(2, 4)"></span>
+                    <span class="dot active" onclick="currentSlide(3, 4)"></span> <!-- Adjust index here -->
+
+                </div>
+            </div>
+
+            <div class="card carousel-card">
+              <div class="carousel-container" id="carousel-6">
+                <div class="carousel-slide">
+                  <div class="slide">
+                  <img src="Works/pie/cake03_Tekengebied 1.webp" alt="Image 1">
+                </div>
+                <div class="slide">
+                  <img src="Works/pie/cake04_Tekengebied 1.webp" alt="Image 2">
+                </div>
+                <div class="slide">
+                  <img src="Works/pie/cake05_Tekengebied 1.webp" alt="Image 3">
+                </div>
+              </div>
+            </div>
+              <div class="carousel-dots" data-carousel="6">
+                  <span class="dot active" onclick="currentSlide(1, 5)"></span> <!-- Adjust index here -->
+                  <span class="dot active" onclick="currentSlide(2, 5)"></span>
+                  <span class="dot active" onclick="currentSlide(3, )"></span> <!-- Adjust index here -->
+
+              </div>
+          </div>
+
+
+
+        
+        </section>
+
+        <script src="JS/carousel.js"></script>
+      </body>
+      </html>
