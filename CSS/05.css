@@ -170,6 +170,6 @@ body {
     }
   
     .carousel-container {
-        height: 100px; /* Compact for small smartphones */
+        height: 200px; /* Compact for small smartphones */
     }
   }
