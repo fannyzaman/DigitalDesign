@@ -1,0 +1,61 @@
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    color: #1507da;
+    background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 99px, rgba(41, 12, 229, 0.5) 100px),
+        repeating-linear-gradient(90deg, transparent, transparent 99px, rgba(41, 12, 229, 0.5) 100px);
+    background-size: 100px 100px;
+    font-family: "depot-new-web", sans-serif; /* Your chosen font */
+}
+
+/* Center the title and button vertically and horizontally */
+.title-container {
+    height: 70vh; /* Full viewport height */
+    padding: 50px;
+    color: #1507da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for the title */
+.title {
+    font-family: "depot-new-web", sans-serif; /* Your chosen font */
+    text-align: center;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 124px;
+    text-align: center;
+}
+.text h2 {
+    font-family: "depot-new-web", sans-serif; /* Your chosen font */
+    color: #1507da;
+    text-align: center;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 64px;
+    line-height: 1.1;
+}
+
+.next-button {
+    background-color: #1507da;;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.back-button {
+    background-color: #1507da;;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
