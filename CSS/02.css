@@ -152,6 +152,24 @@ body {
   .grid-container {
       grid-template-columns: 1fr; /* Switch to a single column layout */
       margin-top: 150px; /* Adjust this value to create more space */
+
+      @media (max-width: 800px) {
+        .card.text-card {
+          width: 90%; /* Ensure the card takes up only 90% of the screen width */
+          max-width: 100%; /* Prevent the card from exceeding the screen width */
+          word-wrap: break-word; /* Ensure long words break and wrap to the next line */
+          overflow-wrap: break-word; /* Older support for word wrapping */
+          padding: 10px; /* Add padding around the text */
+          box-sizing: border-box; /* Include padding in the width calculation */
+        }
+      
+        .card.text-card h1, 
+        .card.text-card h2, 
+        .card.text-card h3 {
+          font-size: calc(1rem + 1vw); /* Responsive font size based on screen width */
+        }
+      }
+      
   }
 
   .carousel-container {
@@ -173,5 +191,38 @@ body {
 
   .carousel-container {
       height: 250px; /* Compact for small smartphones */
+
+      @media (max-width: 400px) {
+        .card.text-card {
+          width: 90%; /* Make sure the card is only 90% of the screen width */
+          max-width: 100%; /* Ensure the card doesn't exceed the screen width */
+          word-wrap: break-word; /* Break long words to fit within the container */
+          overflow-wrap: break-word; /* Support for breaking words */
+          padding: 10px; /* Padding around the text */
+          margin: 0 auto; /* Center the card horizontally */
+          box-sizing: border-box; /* Include padding in width calculation */
+        }
+      
+        .card.text-card h1, 
+        .card.text-card h2, 
+        .card.text-card h3 {
+          font-size: calc(0.8rem + 1.5vw); /* Smaller, responsive font size */
+          line-height: 1.2; /* Adjust line height for better readability */
+        }
+      
+        .card.text-card h1 {
+          font-size: calc(1rem + 2vw); /* Larger heading text but still responsive */
+        }
+      
+        .card.text-card h2 {
+          font-size: calc(0.9rem + 1.8vw); /* Slightly smaller subheading */
+        }
+      
+        .card.text-card h3 {
+          font-size: calc(0.7rem + 1.2vw); /* Smaller text for paragraphs */
+        }
+      }
+      
+      
   }
 }
