@@ -169,6 +169,7 @@ a.active {
   }
 
   .carousel-container {
-      height: 200px; /* Compact for small smartphones */
+      height: 250px; /* Compact for small smartphones */
+    width: 250px;
   }
 }
