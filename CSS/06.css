@@ -3,6 +3,7 @@ body {
   color: #090809;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -53,11 +54,13 @@ a.active {
 }
 
 .card.text-card {
-  display: flex;
+  display: inline-block;
   justify-content: flex-start;
   align-items: flex-start;
   text-align: center;
-  display: inline-block;
+  width: 100%; /* Ensure the card does not exceed screen width */
+  padding: 10px;
+  box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 .card.text-card h1 {
