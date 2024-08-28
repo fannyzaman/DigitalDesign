@@ -26,9 +26,6 @@ h1 {
 }
 
 .navbar {
-  color: #090809;
-  margin: 0;
-  padding: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -46,94 +43,97 @@ a.active {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* Two equal columns */
-  gap: 20px;
-  padding: 20px;
-  margin-top: 110px;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 10px;
+  padding: 10px;
+  margin-top: 160px;
 }
 
-.card.text-card {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+.card {
+  background-color: white;
+  border-radius: 0px;
+  overflow: hidden;
+  padding: 0;
   text-align: center;
-  display: inline-block;
+  transition: opacity 0.5s ease-in-out;
+  cursor: pointer;
 }
 
-.card.text-card h1 {
-  font-size: 56px;
-  font-weight: 400;
-  margin: 0;
-  text-align: center;
-}
-
-.card.text-card h2 {
-  font-size: 64px;
-  font-weight: 400;
-  margin: 10px 0;
-  text-align: center;
-}
-
-.card.text-card h3 {
-  font-size: 16px;
-  font-weight: 300;
-  margin: 0;
-  text-align: center;
-}
-
-.card.carousel-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; /* Ensures the dots are stacked under the slide */
+.card a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
 }
 
 .carousel-container {
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 360px;
 }
 
 .carousel-slide {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  height: 100%; /* Make sure the slide takes up the full height of the container */
-  justify-content: center;
-  align-items: center;
+  height: 100%;
+  overflow: hidden;
 }
 
 .carousel-slide .slide {
-  flex-shrink: 0;
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   box-sizing: border-box;
+  overflow: hidden; /* Ensures no scrollbars on the slide */
+}
+
+.carousel-slide .slide.active {
+  display: flex;
 }
 
 .carousel-slide img {
-  width: auto; /* Adjust the width to maintain aspect ratio */
+  width: 72%;
+  height: auto;
+}
+
+.embedded-page {
+  width: 100%;
   height: 100%;
-  max-height: 100%; /* Ensure the image doesn't exceed the slide's height */
-  max-width: 100%; /* Ensure the image doesn't exceed the slide's width */
-  display: block;
-  margin: auto; /* Center the image inside the slide */
+  border: none;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  pointer-events: none;
+  box-sizing: border-box;
+  transform: scale(0.8); /* Scale down the iframe to 80% of its original size */
+  
+}
+
+.carousel-slide h3,
+.carousel-slide h4 {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .carousel-dots {
   text-align: center;
-  margin-top: 10px; /* Add margin to space the dots from the slides */
+  margin-top: 10px;
 }
 
 .carousel-dots .dot {
-  height: 12px;
-  width: 12px;
-  margin: 0 5px;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -144,38 +144,31 @@ a.active {
   background-color: #717171;
 }
 
-
-@media (max-width: 800px) {
-  .grid-container {
-      grid-template-columns: 1fr; /* Switch to a single column layout */
-      margin-top: 150px; /* Adjust this value to create more space */
-  }
-
-  .carousel-container {
-      height: auto; /* Allow the height to adjust automatically */
-  }
-
-  .carousel-slide img {
-      width: 100%; /* Make the images scale down proportionally */
-      height: auto;
-      max-width: 100%;
-  }
+.card h2 {
+  font-size: 48px;
+  font-weight: 300;
+  margin: 10px 0 0 0;
+  padding-bottom: 10px;
 }
 
-/* Adjust for even smaller screens if needed */
-@media (max-width: 432px) {
-  .grid-container {
-    grid-template-columns: 1fr; /* Switch to a single column layout */
-    margin-top: 150px; /* Adjust this value to create more space */
+.card h3 {
+  font-size: 36px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: center;
 }
 
-.carousel-container {
-    height: auto; /* Allow the height to adjust automatically */
+.card h4 {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 10px 0 0 0;
+  padding-bottom: 10px;
 }
 
-.carousel-slide img {
-    width: 100%; /* Make the images scale down proportionally */
-    height: auto;
-    max-width: 100%;
-}
-}
+
