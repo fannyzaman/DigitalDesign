@@ -197,6 +197,7 @@ a.active {
     max-width: 100%;
 }
 .carousel-slide .slide {
+  max-width: 350px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -221,6 +222,7 @@ a.active {
     max-width: 100%;
 }
 .carousel-slide .slide {
+  max-width: 350px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
