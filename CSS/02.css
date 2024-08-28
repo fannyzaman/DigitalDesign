@@ -197,3 +197,10 @@ a.active {
     max-width: 100%;
 }
 }
+.card.text-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: center;
+  display: inline-block;
+}
