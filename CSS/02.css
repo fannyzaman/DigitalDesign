@@ -175,12 +175,12 @@ a.active {
 }
 
 .carousel-slide img {
-    width: 100%; /* Make the images scale down proportionally */
+    width: 80%; /* Make the images scale down proportionally */
     height: auto;
     max-width: 100%;
 }
   .card.text-card {
-  width: 50%; /* Make the text-card scale down proportionally */
+  width: 80%; /* Make the text-card scale down proportionally */
   height: auto;
   max-width: 100%;
 }
