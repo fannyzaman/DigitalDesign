@@ -1,14 +1,8 @@
-/* Base Styles */
 body {
   font-family: 'Inconsolata', sans-serif;
   color: #090809;
   margin: 0;
   padding: 0;
-}
-
-h1, h2, h3 {
-  margin: 0;
-  text-align: center;
 }
 
 h1 {
@@ -41,8 +35,8 @@ h1 {
   width: 100%;
   background-color: white;
   z-index: 1000;
-  padding: 10px 16px;
-  height: 80px;
+  padding: 10px 32px;
+  height: 100px;
   box-sizing: border-box;
 }
 
@@ -52,10 +46,18 @@ a.active {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); /* Adjusted min-width for grid items */
-  gap: 10px; /* Reduced gap */
-  padding: 10px;
-  margin-top: 150px;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px;
+  padding: 20px;
+  margin-top: 110px;
+}
+
+.card.text-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: center;
+  display: inline-block;
 }
 
 .card.text-card h1 {
@@ -83,13 +85,14 @@ a.active {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column; /* Ensures the dots are stacked under the slide */
 }
 
 .carousel-container {
   position: relative;
   width: 100%;
   overflow: hidden;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,33 +101,39 @@ a.active {
 .carousel-slide {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  height: auto;
+  height: 100%; /* Make sure the slide takes up the full height of the container */
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel-slide .slide {
   flex-shrink: 0;
   width: 100%;
-  height: auto;
-  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
 }
 
-.carousel-slide img,
-.carousel-slide iframe {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+.carousel-slide img {
+  width: auto; /* Adjust the width to maintain aspect ratio */
+  height: 100%;
+  max-height: 100%; /* Ensure the image doesn't exceed the slide's height */
+  max-width: 100%; /* Ensure the image doesn't exceed the slide's width */
+  display: block;
+  margin: auto; /* Center the image inside the slide */
 }
 
 .carousel-dots {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 10px; /* Add margin to space the dots from the slides */
 }
 
 .carousel-dots .dot {
-  height: 8px;
-  width: 8px;
-  margin: 0 3px;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -135,45 +144,49 @@ a.active {
   background-color: #717171;
 }
 
-/* Mobile Adjustments */
-@media (max-width: 432px) {
+/* Responsive adjustments */
+@media (max-width: 1080px) {
   .grid-container {
-    grid-template-columns: 1fr; /* Single column for smaller screens */
-    padding: 5px; /* Further reduced padding */
-    gap: 5px; /* Reduced gap */
-    margin-top: 60px; /* Further reduced top margin */
-  }
-
-  .card.carousel-card {
-    margin: 0; /* Remove extra margin */
+      grid-template-columns: 1fr; /* Switch to a single column layout */
+      margin-top: 150px; /* Adjust this value to create more space */
   }
 
   .carousel-container {
-    padding: 0; /* Remove extra padding */
+      height: auto; /* Allow the height to adjust automatically */
   }
 
-  .carousel-slide .slide {
-    padding-top: 75%; /* Maintain aspect ratio */
+  .carousel-slide img {
+      width: 100%; /* Make the images scale down proportionally */
+      height: auto;
+      max-width: 100%;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .grid-container {
+      grid-template-columns: 1fr; /* Switch to a single column layout */
+      margin-top: 150px; /* Adjust this value to create more space */
   }
 
-  .carousel-slide img,
-  .carousel-slide iframe {
-    height: auto; /* Adjust height */
+  .carousel-container {
+      height: auto; /* Allow the height to adjust automatically */
   }
 
-  .carousel-dots {
-    margin-top: 5px; /* Reduced space above dots */
+  .carousel-slide img {
+      width: 100%; /* Make the images scale down proportionally */
+      height: auto;
+      max-width: 100%;
+  }
+}
+
+/* Adjust for even smaller screens if needed */
+@media (max-width: 400px) {
+  .grid-container {
+      margin-top: 160px; /* Increase the margin-top for smaller screens */
   }
 
-  .card.text-card h1 {
-    font-size: 20px; /* Adjusted size for smaller screens */
-  }
-
-  .card.text-card h2 {
-    font-size: 18px; /* Adjusted size for smaller screens */
-  }
-
-  .card.text-card h3 {
-    font-size: 12px; /* Adjusted size for smaller screens */
+  .carousel-container {
+      height: 250px; /* Compact for small smartphones */
   }
 }
