@@ -196,7 +196,7 @@ a.active {
     height: auto;
     max-width: 100%;
 }
-.carousel-slide .slide {
+.card.text-card {
   max-width: 350px;
   display: flex;
   justify-content: flex-start;
@@ -221,7 +221,7 @@ a.active {
     height: auto;
     max-width: 100%;
 }
-.carousel-slide .slide {
+.card.text-card {
   max-width: 350px;
   display: flex;
   justify-content: flex-start;
