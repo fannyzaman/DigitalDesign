@@ -144,7 +144,7 @@ a.active {
   background-color: #717171;
 }
 
-
+/* Responsive adjustments */
 @media (max-width: 800px) {
   .grid-container {
       grid-template-columns: 1fr; /* Switch to a single column layout */
@@ -163,26 +163,12 @@ a.active {
 }
 
 /* Adjust for even smaller screens if needed */
-@media (max-width: 432px) {
+@media (max-width: 400px) {
   .grid-container {
-    grid-template-columns: 1fr; /* Switch to a single column layout */
-    margin-top: 150px; /* Adjust this value to create more space */
-}
+      margin-top: 160px; /* Increase the margin-top for smaller screens */
+  }
 
-.carousel-container {
-    height: auto; /* Allow the height to adjust automatically */
-    max-width: 350px;
-}
-
-.carousel-slide img {
-    width: 80%; /* Make the images scale down proportionally */
-    height: auto;
-    max-width: 100%;
-}
-  .card.text-card {
-  width: 80%; /* Make the text-card scale down proportionally */
-  height: auto;
-  max-width: 100%;
-}
-
+  .carousel-container {
+      height: 250px; /* Compact for small smartphones */
+  }
 }
