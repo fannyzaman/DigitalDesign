@@ -61,14 +61,14 @@ a.active {
 }
 
 .card.text-card h1 {
-  font-size: 56px;
+  font-size: 64px;
   font-weight: 400;
   margin: 0;
   text-align: center;
 }
 
 .card.text-card h2 {
-  font-size: 64px;
+  font-size: 56px;
   font-weight: 400;
   margin: 10px 0;
   text-align: center;
@@ -178,7 +178,8 @@ a.active {
       height: auto;
       max-width: 100%;
   }
-  .card.text-card {
+  .card.text-card h1 {
+    font-size: 48px;
     max-width: 350px;
     display: flex;
     justify-content: flex-start;
@@ -204,7 +205,8 @@ a.active {
     height: auto;
     max-width: 100%;
 }
-.card.text-card {
+.card.text-card h1 {
+  font-size: 48px;
   max-width: 350px;
   display: flex;
   justify-content: flex-start;
@@ -229,7 +231,8 @@ a.active {
     height: auto;
     max-width: 100%;
 }
-.card.text-card {
+.card.text-card h1 {
+  font-size: 48px;
   max-width: 350px;
   display: flex;
   justify-content: flex-start;
