@@ -171,6 +171,7 @@ a.active {
 
   .carousel-container {
       height: auto; /* Allow the height to adjust automatically */
+      align-items: center;
   }
 
   .carousel-slide img {
@@ -199,6 +200,7 @@ a.active {
 
 .carousel-container {
     height: auto; /* Allow the height to adjust automatically */
+    align-items: center;
 }
 
 .carousel-slide img {
@@ -226,6 +228,7 @@ a.active {
 
 .carousel-container {
     height: auto; /* Allow the height to adjust automatically */
+    align-items: center;
 }
 
 .carousel-slide img {
