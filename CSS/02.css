@@ -171,6 +171,7 @@ a.active {
 
 .carousel-container {
     height: auto; /* Allow the height to adjust automatically */
+    max-width: 400px;
 }
 
 .carousel-slide img {
