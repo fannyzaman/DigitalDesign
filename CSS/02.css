@@ -149,6 +149,8 @@ a.active {
   .grid-container {
       grid-template-columns: 1fr; /* Switch to a single column layout */
       margin-top: 150px; /* Adjust this value to create more space */
+          margin-left: 10px;
+      margin-right: 10px;
   }
 
   .carousel-container {
