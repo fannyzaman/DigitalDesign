@@ -41,8 +41,8 @@ h1 {
   width: 100%;
   background-color: white;
   z-index: 1000;
-  padding: 10px 32px;
-  height: 100px;
+  padding: 10px 16px;
+  height: 80px;
   box-sizing: border-box;
 }
 
@@ -52,31 +52,22 @@ a.active {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  margin-top: 160px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted min-width for grid items */
+  gap: 10px; /* Reduced gap */
+  padding: 10px;
+  margin-top: 80px;
 }
 
 .card.text-card h1 {
-  font-size: 56px;
-  font-weight: 400;
-  margin: 0;
-  text-align: center;
+  font-size: 24px;
 }
 
 .card.text-card h2 {
-  font-size: 64px;
-  font-weight: 400;
-  margin: 10px 0;
-  text-align: center;
+  font-size: 20px;
 }
 
 .card.text-card h3 {
-  font-size: 16px;
-  font-weight: 300;
-  margin: 0;
-  text-align: center;
+  font-size: 14px;
 }
 
 .card.carousel-card {
@@ -122,9 +113,9 @@ a.active {
 }
 
 .carousel-dots .dot {
-  height: 12px;
-  width: 12px;
-  margin: 0 5px;
+  height: 8px;
+  width: 8px;
+  margin: 0 3px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -138,51 +129,42 @@ a.active {
 /* Mobile Adjustments */
 @media (max-width: 432px) {
   .grid-container {
-    grid-template-columns: 1fr; /* Switch to a single column layout */
-    padding: 10px;
-    gap: 10px;
-    margin-top: 80px; /* Reduced top margin for better fit */
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+    padding: 5px; /* Further reduced padding */
+    gap: 5px; /* Reduced gap */
+    margin-top: 60px; /* Further reduced top margin */
   }
 
-  .navbar {
-    padding: 10px 16px;
-    height: 80px;
-  }
-
-  .links a {
-    font-size: 14px;
-    margin: 0 5px;
-  }
-
-  .card.text-card h1 {
-    font-size: 24px; /* Adjust h1 size for mobile */
-  }
-
-  .card.text-card h2 {
-    font-size: 20px; /* Adjust h2 size for mobile */
-  }
-
-  .card.text-card h3 {
-    font-size: 14px; /* Adjust h3 size for mobile */
+  .card.carousel-card {
+    margin: 0; /* Remove extra margin */
   }
 
   .carousel-container {
-    width: 100%;
+    padding: 0; /* Remove extra padding */
   }
 
   .carousel-slide .slide {
-    padding-top: 75%; /* Adjust padding to maintain aspect ratio */
+    padding-top: 75%; /* Maintain aspect ratio */
   }
 
   .carousel-slide img,
   .carousel-slide iframe {
-    width: 100%;
-    height: 100%; /* Ensures full coverage of the slide area */
+    height: auto; /* Adjust height */
   }
 
-  .carousel-dots .dot {
-    height: 8px;
-    width: 8px;
-    margin: 0 3px;
+  .carousel-dots {
+    margin-top: 5px; /* Reduced space above dots */
+  }
+
+  .card.text-card h1 {
+    font-size: 20px; /* Adjusted size for smaller screens */
+  }
+
+  .card.text-card h2 {
+    font-size: 18px; /* Adjusted size for smaller screens */
+  }
+
+  .card.text-card h3 {
+    font-size: 12px; /* Adjusted size for smaller screens */
   }
 }
