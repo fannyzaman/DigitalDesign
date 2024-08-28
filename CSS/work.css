@@ -148,7 +148,7 @@ a.active {
 @media (max-width: 432px) {
   .grid-container {
     grid-template-columns: 1fr; /* Switch to a single column layout */
-    margin-top: 150px; /* Adjust this value to create more space */
+    margin-top: 160px; /* Adjust this value to create more space */
 }
 
 .carousel-container {
@@ -176,7 +176,7 @@ a.active {
 @media (max-width: 360px) {
   .grid-container {
     grid-template-columns: 1fr; /* Switch to a single column layout */
-    margin-top: 150px; /* Adjust this value to create more space */
+    margin-top: 160px; /* Adjust this value to create more space */
 }
 
 .carousel-container {
