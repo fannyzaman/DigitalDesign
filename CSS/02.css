@@ -190,3 +190,48 @@ a.active {
       height: 250px; /* Compact for small smartphones */
   }
 }
+
+/* Mobile adjustments */
+@media (max-width: 432px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Switch to a single column layout */
+    margin-top: 150px; /* Adjust this value to create more space */
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .carousel-container {
+    height: auto; /* Allow the height to adjust automatically */
+  }
+
+  .carousel-slide .slide {
+    padding-top: 100%; /* Make the slides square (1:1 aspect ratio) */
+  }
+
+  .carousel-slide img,
+  .carousel-slide iframe {
+    width: 100%; /* Make the images and iframes scale down proportionally */
+    height: auto;
+    max-width: 100%;
+  }
+
+  .navbar {
+    padding: 10px 16px;
+    height: 80px;
+  }
+
+  h1 {
+    font-size: 24px; /* Smaller font for the title */
+  }
+
+  .links a {
+    font-size: 14px; /* Adjust the font size of the navigation links */
+    margin: 0 5px;
+  }
+
+  .carousel-dots .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 3px;
+  }
+}
