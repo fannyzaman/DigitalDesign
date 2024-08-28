@@ -178,6 +178,14 @@ a.active {
       height: auto;
       max-width: 100%;
   }
+  .card.text-card {
+    max-width: 350px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+    display: inline-block;
+  }
 }
 
 /* Adjust for even smaller screens if needed */
@@ -196,7 +204,7 @@ a.active {
     height: auto;
     max-width: 100%;
 }
-.carousel-slide .slide {
+.card.text-card {
   max-width: 350px;
   display: flex;
   justify-content: flex-start;
@@ -221,7 +229,7 @@ a.active {
     height: auto;
     max-width: 100%;
 }
-.carousel-slide .slide {
+.card.text-card {
   max-width: 350px;
   display: flex;
   justify-content: flex-start;
