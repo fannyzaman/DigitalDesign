@@ -61,7 +61,7 @@ a.active {
 }
 
 .card.text-card h1 {
-  font-size: 64px;
+  font-size: 56px;
   font-weight: 400;
   margin: 0;
   text-align: center;
@@ -78,7 +78,7 @@ a.active {
   font-size: 16px;
   font-weight: 300;
   margin: 0;
-  text-align: left;
+  text-align: center;
 }
 
 .card.carousel-card {
@@ -94,17 +94,16 @@ a.active {
   overflow: hidden;
   height: auto;
   display: flex;
-  justify-content: center; /* Center the slide content horizontally */
-  align-items: center; /* Center the slide content vertically */
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel-slide {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  height:100%;
-  width: 100%;
-  justify-content: center; /* Center the slide content horizontally */
-  align-items: center; /* Center the slide content vertically */
+  height: 100%; /* Make sure the slide takes up the full height of the container */
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel-slide .slide {
@@ -112,8 +111,8 @@ a.active {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center; /* Center the image horizontally within the slide */
-  align-items: center; /* Center the image vertically within the slide */
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
 }
 
@@ -122,18 +121,9 @@ a.active {
   height: 100%;
   max-height: 100%; /* Ensure the image doesn't exceed the slide's height */
   max-width: 100%; /* Ensure the image doesn't exceed the slide's width */
-  display: inline-block;
+  display: block;
   margin: auto; /* Center the image inside the slide */
 }
-
-.carousel-slide .slide img {
-  width: 100%;  /* Make the iframe fill the width of the container */
-  height: 100%; /* Ensure the iframe takes up the full height of its container */
-  border: none; /* Remove any default border */
-  display: inline-block; /* Ensure the iframe behaves like a block element */
-  /* Include padding and border in the element's width and height */
-}
-
 
 .carousel-dots {
   text-align: center;
@@ -155,49 +145,48 @@ a.active {
 }
 
 /* Responsive adjustments */
+@media (max-width: 1080px) {
+  .grid-container {
+      grid-template-columns: 1fr; /* Switch to a single column layout */
+      margin-top: 150px; /* Adjust this value to create more space */
+  }
+
+  .carousel-container {
+      height: auto; /* Allow the height to adjust automatically */
+  }
+
+  .carousel-slide img {
+      width: 100%; /* Make the images scale down proportionally */
+      height: auto;
+      max-width: 100%;
+  }
+}
+
+
 @media (max-width: 800px) {
-.grid-container {
-    grid-template-columns: 1fr; /* Switch to a single column layout */
-    margin-top: 150px; /* Adjust this value to create more space */
+  .grid-container {
+      grid-template-columns: 1fr; /* Switch to a single column layout */
+      margin-top: 150px; /* Adjust this value to create more space */
+  }
+
+  .carousel-container {
+      height: auto; /* Allow the height to adjust automatically */
+  }
+
+  .carousel-slide img {
+      width: 100%; /* Make the images scale down proportionally */
+      height: auto;
+      max-width: 100%;
+  }
 }
 
-.carousel-container {
-    height: auto; /* Allow the height to adjust automatically */
-}
-
-.carousel-slide img {
-    width: 100%; /* Make the images scale down proportionally */
-    height: auto;
-    max-width: 100%;
-}
-}
-
-@media (min-width: 1600px) {
-.carousel-container {
-    height: 600px; /* Ample space for large screens */
-}
-}
-
-@media (max-width: 1600px) and (min-width: 1200px) {
-.carousel-container {
-    height: 400px; /* Balanced height for large desktops */
-}
-}
-
-@media (max-width: 1200px) and (min-width: 800px) {
-.carousel-container {
-    height: 400px; /* Adjusted for tablets and smaller laptops */
-}
-}
-
-@media (max-width: 800px) and (min-width: 400px) {
-.carousel-container {
-    height: 300px; /* Suitable for large smartphones and tablets */
-}
-}
-
+/* Adjust for even smaller screens if needed */
 @media (max-width: 400px) {
-.carousel-container {
-    height: 250px; /* Compact for small smartphones */
-}
+  .grid-container {
+      margin-top: 160px; /* Increase the margin-top for smaller screens */
+  }
+
+  .carousel-container {
+      height: 250px; /* Compact for small smartphones */
+  }
 }
