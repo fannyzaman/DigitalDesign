@@ -181,20 +181,9 @@ a.active {
 }
 
 /* Adjust for even smaller screens if needed */
-@media (max-width: 432px) {
+@media (max-width: 400px) {
   .grid-container {
       margin-top: 160px; /* Increase the margin-top for smaller screens */
-
-      .carousel-container {
-        height: auto; /* Allow the height to adjust automatically */
-    }
-  
-    .carousel-slide img {
-        width: 100%; /* Make the images scale down proportionally */
-        height: auto;
-        max-width: 100%;
-    }
-  }
   }
 
   .carousel-container {
