@@ -46,7 +46,7 @@ a.active {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  grid-template-columns: 1fr 1fr 1fr; /* Two equal columns */
   gap: 20px;
   padding: 20px;
   margin-top: 110px;
