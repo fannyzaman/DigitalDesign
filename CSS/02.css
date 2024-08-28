@@ -174,4 +174,15 @@ a.active {
     max-width: 400px;
 }
 
+.carousel-slide img {
+    width: 100%; /* Make the images scale down proportionally */
+    height: auto;
+    max-width: 100%;
+}
+  .card.text-card {
+  width: 100%; /* Make the images scale down proportionally */
+  height: auto;
+  max-width: 100%;
+}
+
 }
