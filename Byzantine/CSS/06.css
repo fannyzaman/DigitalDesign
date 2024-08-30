@@ -102,9 +102,9 @@ body, html {
     
 #amazon-container {
       height: 200px; /* Compact for small smartphones */
-      
+
     }
-            .partner {
+      .partner {
         width: 0;
         height: 0;
         border-left: 30px solid transparent; /* Adjust border size for triangle */
@@ -114,6 +114,17 @@ body, html {
         position: absolute;
         z-index: -1;
     }
+    .amazon {
+      width: 0;
+      height: 0;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 60px solid; /* Adjust the color dynamically using JavaScript */
+      border-bottom-color: transparent; /* Initialize as transparent */
+      position: absolute;
+  }
+      
+   
   }
 
 
