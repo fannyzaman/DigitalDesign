@@ -47,34 +47,33 @@ body, html {
 
 
 @media (max-width: 432px) {
-    
-    #container {
-          height: 200px; /* Compact for small smartphones */
-    
-        }
-          .partner {
-            width: 0;
-            height: 0;
-            border-left: 30px solid transparent; /* Adjust border size for triangle */
-            border-right: 30px solid transparent; /* Adjust border size for triangle */
-            border-bottom: 60px solid; /* Adjust border size for triangle */
-            border-bottom-color: grey; /* Adjust the color dynamically using JavaScript */
-            position: absolute;
-            z-index: -1;
-        }
+    .container {
+        width: 100vw; /* Full viewport width */
+        height: 100vh; /* Full viewport height */
+    }
 
-        #message {
-            font-family: "depot-new-web", sans-serif; /* Your chosen font */
-            color: #3213be;
-            text-align: center;
-            font-weight: 700;
-            font-style: normal;
-            font-size: 24px;
-            text-align: center; /* Center text horizontally */
-            position: absolute;
-            top: 50%; /* Move to the center vertically */
-            left: 50%; /* Move to the center horizontally */
-            transform: translate(-50%, -50%); /* Center the div */
-            z-index: 1;
-                } 
-          }
+    #message {
+        font-size: 64px; /* Adjust font size for smaller screens */
+    }
+
+    .partner {
+        width: 0;
+        height: 0;
+        border-left: 30px solid transparent; /* Adjust border size for triangle */
+        border-right: 30px solid transparent; /* Adjust border size for triangle */
+        border-bottom: 60px solid grey; /* Adjust border size and color for triangle */
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
