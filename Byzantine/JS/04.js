@@ -24,8 +24,8 @@ function createNodes() {
         let nodeElement = document.createElement('div');
         nodeElement.classList.add('node');
         nodeElement.style.borderBottomColor = color || 'transparent'; // Set border color for the triangle
-        nodeElement.style.left = `${Math.random() * (window.innerWidth - 300)}px`; // Set random X position
-        nodeElement.style.top = `${Math.random() * (window.innerHeight - 300)}px`; // Set random Y position
+        nodeElement.style.left = `${Math.random() * 90}vw`; // Use viewport width percentage
+        nodeElement.style.top = `${Math.random() * 90}vh`; // Use viewport height percentage
 
 
 
