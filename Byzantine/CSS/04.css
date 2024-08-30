@@ -56,14 +56,15 @@ body, html {
         font-size: 80px; /* Adjust font size for smaller screens */
     }
 
-    .partner {
+
+    .node {
         width: 0;
         height: 0;
-        border-left: 30px solid transparent; /* Adjust border size for triangle */
-        border-right: 30px solid transparent; /* Adjust border size for triangle */
-        border-bottom: 60px solid grey; /* Adjust border size and color for triangle */
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 60px solid; /* Adjust the color dynamically using JavaScript */
+        border-bottom-color: transparent; /* Initialize as transparent */
         position: absolute;
-        z-index: -1;
     }
 }
 
