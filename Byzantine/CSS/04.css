@@ -1,80 +1,99 @@
-/* Reset default margin and padding */
-body, html {
-    margin: 0;
-    padding: 0;
+// Array to store the colors of each node
+let nodes = [];
 
-    background-image:
-        repeating-linear-gradient(0deg, transparent, transparent 99px, rgba(41, 12, 229, 0.5) 100px),
-        repeating-linear-gradient(90deg, transparent, transparent 99px, rgba(41, 12, 229, 0.5) 100px);
-    background-size: 100px 100px;
-    font-family: "depot-new-web", sans-serif; /* Your chosen font */
+// Initialize the colors of the nodes
+for (let i = 0; i < 6; i++) {
+    // Assign random colors to each node
+    nodes.push(getRandomColor());
+}
+
+// Function to generate a random color
+function getRandomColor() {
+    let colors = ['red', 'green'];
+
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
+// Function to create nodes visually
+function createNodes() {
+    let nodesContainer = document.getElementById('nodes');
+    nodesContainer.innerHTML = ''; // Clear previous nodes
+
+    // Create a node element for each color in the nodes array
+    nodes.forEach(color => {
+        let nodeElement = document.createElement('div');
+        nodeElement.classList.add('node');
+        nodeElement.style.borderBottomColor = color || 'transparent'; // Set border color for the triangle
+        nodeElement.style.left = `${Math.random() * 90}vw`; // Use viewport width percentage
+        nodeElement.style.top = `${Math.random() * 90}vh`; // Use viewport height percentage
+
+
+
+        nodesContainer.appendChild(nodeElement);
+    });
+}
+
+
+// Function to update nodes colors every second
+function updateNodes() {
+    // Change colors of all nodes every second
+    nodes = nodes.map(() => getRandomColor());
+    createNodes();
+
+    // Check for consensus or joker color after 2 second
+    setTimeout(checkConsensus, 2000);
+}
+
+// Function to check consensus
+function checkConsensus() {
+    let redCount = 0;
+    let greenCount = 0;
+
+    // Count the number of red and green nodes
+    nodes.forEach(color => {
+        if (color === 'red') {
+            redCount++;
+        } else if (color === 'green') {
+            greenCount++;
+        }
+    });
+
+    // Check for consensus
+    if (redCount >= 4) {
+        console.log('Consensus Attack');
+        showMessage('Attack', 2000); // Display message for 2 seconds
+        nodes = nodes.map(() => 'red'); // Set all nodes to red for the attack
+    } else if (greenCount >= 4) {
+        console.log('Consensus Retreat');
+        showMessage('Retreat', 2000); // Display message for 2 seconds
+        nodes = nodes.map(() => 'green'); // Set all nodes to green for the retreat
+    } else {
+        console.log('No consensus');
+        showMessage('No Consensus', 2000); // Display message for 2 seconds
+        nodes = nodes.map(() => 'black'); // Set all nodes to black when there's no consensus
+    }
+
+    // Update nodes visually
+    createNodes();
+
+    // Repeat the process after 2 seconds
+    setTimeout(updateNodes, 2000);
+}
+
+
+// Function to display the consensus green or red
+function showMessage(message, duration) {
+    let messageContainer = document.getElementById('message');
+    messageContainer.innerText = message;
     
+    // Show the message
+    messageContainer.style.display = 'block';
+
+    // Hide the message after the specified duration
+    setTimeout(function() {
+        messageContainer.style.display = 'none';
+    }, duration);
 }
 
-/* Center the container vertically and horizontally */
-.container {
-     position: relative;
-     width: 90vw; /* 100% of the viewport width */
-     height: 90vh; /* 100% of the viewport height */
-}
-   
-/* Style for the message */
-#message {
-    font-family: "depot-new-web", sans-serif; /* Your chosen font */
-    color: #3213be;
-    text-align: center;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 120px;
-    text-align: center; /* Center text horizontally */
-    position: absolute;
-    top: 50%; /* Move to the center vertically */
-    left: 50%; /* Move to the center horizontally */
-    transform: translate(-50%, -50%); /* Center the div */
-    z-index: 1;
-        }  
-
-/* Style for the colored nodes */
-.node {
-    width: 0;
-    height: 0;
-    border-left: 60px solid transparent;
-    border-right: 60px solid transparent;
-    border-bottom: 120px solid; /* Adjust the color dynamically using JavaScript */
-    border-bottom-color: transparent; /* Initialize as transparent */
-    position: absolute;
-}
-
-
-@media (max-width: 432px) {
-    .container {
-        width: 100vw; /* Full viewport width */
-        height: 100vh; /* Full viewport height */
-    }
-
-    #message {
-        font-size: 80px; /* Adjust font size for smaller screens */
-    }
-
-
-    .node {
-        width: 0;
-        height: 0;
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-bottom: 60px solid; /* Adjust the color dynamically using JavaScript */
-        border-bottom-color: transparent; /* Initialize as transparent */
-        position: absolute;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
+// Call updateNodes function to start the process
+updateNodes();
