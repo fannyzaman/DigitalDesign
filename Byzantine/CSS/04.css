@@ -1,99 +1,89 @@
-// Array to store the colors of each node
-let nodes = [];
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
 
-// Initialize the colors of the nodes
-for (let i = 0; i < 6; i++) {
-    // Assign random colors to each node
-    nodes.push(getRandomColor());
+    background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 99px, rgba(41, 12, 229, 0.5) 100px),
+        repeating-linear-gradient(90deg, transparent, transparent 99px, rgba(41, 12, 229, 0.5) 100px);
+    background-size: 100px 100px;
+    font-family: "depot-new-web", sans-serif; /* Your chosen font */
 }
 
-// Function to generate a random color
-function getRandomColor() {
-    let colors = ['red', 'green'];
-
-    return colors[Math.floor(Math.random() * colors.length)];
+/* Center the container vertically and horizontally */
+.container {
+    position: relative;
+    width: 90vw; /* 90% of the viewport width */
+    height: 90vh; /* 90% of the viewport height */
+    overflow: hidden; /* Prevent overflow */
 }
 
-// Function to create nodes visually
-function createNodes() {
-    let nodesContainer = document.getElementById('nodes');
-    nodesContainer.innerHTML = ''; // Clear previous nodes
+/* Style for the message */
+#message {
+    font-family: "depot-new-web", sans-serif; /* Your chosen font */
+    color: #3213be;
+    text-align: center;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 120px;
+    position: absolute;
+    top: 50%; /* Move to the center vertically */
+    left: 50%; /* Move to the center horizontally */
+    transform: translate(-50%, -50%); /* Center the div */
+    z-index: 1;
+}
 
-    // Create a node element for each color in the nodes array
-    nodes.forEach(color => {
-        let nodeElement = document.createElement('div');
-        nodeElement.classList.add('node');
-        nodeElement.style.borderBottomColor = color || 'transparent'; // Set border color for the triangle
-        nodeElement.style.left = `${Math.random() * 90}vw`; // Use viewport width percentage
-        nodeElement.style.top = `${Math.random() * 90}vh`; // Use viewport height percentage
+/* Style for the colored nodes */
+.node {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 120px solid transparent; /* Adjust based on your needs */
+    position: absolute;
+    /* Example positioning */
 
-
-
-        nodesContainer.appendChild(nodeElement);
-    });
 }
 
 
-// Function to update nodes colors every second
-function updateNodes() {
-    // Change colors of all nodes every second
-    nodes = nodes.map(() => getRandomColor());
-    createNodes();
-
-    // Check for consensus or joker color after 2 second
-    setTimeout(checkConsensus, 2000);
-}
-
-// Function to check consensus
-function checkConsensus() {
-    let redCount = 0;
-    let greenCount = 0;
-
-    // Count the number of red and green nodes
-    nodes.forEach(color => {
-        if (color === 'red') {
-            redCount++;
-        } else if (color === 'green') {
-            greenCount++;
-        }
-    });
-
-    // Check for consensus
-    if (redCount >= 4) {
-        console.log('Consensus Attack');
-        showMessage('Attack', 2000); // Display message for 2 seconds
-        nodes = nodes.map(() => 'red'); // Set all nodes to red for the attack
-    } else if (greenCount >= 4) {
-        console.log('Consensus Retreat');
-        showMessage('Retreat', 2000); // Display message for 2 seconds
-        nodes = nodes.map(() => 'green'); // Set all nodes to green for the retreat
-    } else {
-        console.log('No consensus');
-        showMessage('No Consensus', 2000); // Display message for 2 seconds
-        nodes = nodes.map(() => 'black'); // Set all nodes to black when there's no consensus
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        width: 100vw; /* Full viewport width */
+        height: 100vh; /* Full viewport height */
     }
 
-    // Update nodes visually
-    createNodes();
+    #message {
+        font-size: 104px; /* Adjust font size for smaller screens */
+    }
 
-    // Repeat the process after 2 seconds
-    setTimeout(updateNodes, 2000);
+    .node {
+        width: 0;
+        height: 0;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 60px solid transparent; /* Adjust to fit the smaller size */
+        position: absolute;
+    }
 }
 
+/* Responsive adjustments */
+@media (max-width: 432px) {
+    .container {
+        width: 100vw; /* Full viewport width */
+        height: 100vh; /* Full viewport height */
+    }
 
-// Function to display the consensus green or red
-function showMessage(message, duration) {
-    let messageContainer = document.getElementById('message');
-    messageContainer.innerText = message;
-    
-    // Show the message
-    messageContainer.style.display = 'block';
+    #message {
+        font-size: 80px; /* Adjust font size for smaller screens */
+    }
 
-    // Hide the message after the specified duration
-    setTimeout(function() {
-        messageContainer.style.display = 'none';
-    }, duration);
+    .node {
+        width: 0;
+        height: 0;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 60px solid transparent; /* Adjust to fit the smaller size */
+        position: absolute;
+    }
 }
-
-// Call updateNodes function to start the process
-updateNodes();
