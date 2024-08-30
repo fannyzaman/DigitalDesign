@@ -68,10 +68,10 @@ a.active {
 }
 
 .card.text-card h2 {
-  font-size: 64px;
+  font-size: 24px;
   font-weight: 400;
   margin: 10px 0;
-  text-align: center;
+  text-align: left;
 }
 
 .card.text-card h3 {
@@ -198,6 +198,6 @@ a.active {
 
 @media (max-width: 400px) {
 .carousel-container {
-    height: 200px; /* Compact for small smartphones */
+    height: 250px; /* Compact for small smartphones */
 }
 }
