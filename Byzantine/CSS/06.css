@@ -1,0 +1,140 @@
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 10;
+    color: #1507da;
+    background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 99px, rgba(41, 12, 229, 0.5) 100px),
+        repeating-linear-gradient(90deg, transparent, transparent 99px, rgba(41, 12, 229, 0.5) 100px);
+    background-size: 100px 100px;
+    font-family: "depot-new-web", sans-serif; /* Your chosen font */
+}
+
+/* Center the title and button vertically and horizontally */
+.title-container {
+    height: 90vh; /* Full viewport height */
+    color: #1507da;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+    
+  
+}
+
+#amazon-container h1 {
+  height: 90vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Style for the title */
+.title {
+    font-family: "depot-new-web", sans-serif; /* Your chosen font */
+    text-align: center;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 124px;
+}
+.text {
+    font-family: "depot-new-web", sans-serif; /* Your chosen font */
+    color: #1507da;
+    text-align: center;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 80px;
+    line-height: 1.1;
+}
+
+/* Define CSS styles for the Amazon and Partner nodes during movement */
+.amazon.move {
+    transition: transform 0.5s ease; /* Smooth transition for movement */
+    
+}
+
+.partner.move {
+    transition: transform 0.5s ease; /* Smooth transition for movement */
+    
+}
+
+
+/* Define CSS styles for the Amazon nodes */
+.amazon {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 120px solid; /* Adjust the color dynamically using JavaScript */
+    position: absolute;
+    z-index: -1;
+    
+}
+
+
+.partner {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent; /* Adjust border size for triangle */
+    border-right: 70px solid transparent; /* Adjust border size for triangle */
+    border-bottom: 140px solid; /* Adjust border size for triangle */
+    border-bottom-color: grey; /* Adjust the color dynamically using JavaScript */
+    position: absolute;
+    z-index: -1;
+}
+
+.pop {
+    visibility: hidden;
+}
+
+/* Responsive adjustments */
+@media (min-width: 1600px) {
+  
+#amazon-container {
+      height: 600px; /* Ample space for large screens */
+     
+    }
+  }
+  
+  @media (max-width: 1600px) and (min-width: 1200px) {
+  
+#amazon-container {
+      height: 400px; /* Balanced height for large desktops */
+      
+    }
+  }
+  
+  @media (max-width: 1200px) and (min-width: 800px) {
+   
+#amazon-container {
+      height: 400px; /* Adjusted for tablets and smaller laptops */
+      
+    }
+  }
+  
+  @media (max-width: 800px) and (min-width: 400px) {
+   
+#amazon-container {
+      height: 300px; /* Suitable for large smartphones and tablets */
+     
+    }
+  }
+  
+  @media (max-width: 400px) {
+    
+#amazon-container {
+      height: 200px; /* Compact for small smartphones */
+      
+    }
+  }
+
+
+
+
+
+
+
+
