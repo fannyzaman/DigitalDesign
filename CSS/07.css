@@ -300,4 +300,34 @@ body {
     text-align: center;
     display: inline-block;
   }
+
+    .card.text-card h2 {
+    font-size: 24px;
+    max-width: 350px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+    display: inline-block;
+  }
+
+    .card.text-card h3 {
+    font-size: 16px;
+    max-width: 350px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+    display: inline-block;
+  }
+
+    .card.text-card h4 {
+    font-size: 12px;
+    max-width: 350px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+    display: inline-block;
+  }
   }
