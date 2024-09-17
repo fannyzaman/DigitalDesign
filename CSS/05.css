@@ -61,17 +61,19 @@ a.active {
 }
 
 .card.text-card h1 {
-  font-size: 64px;
+  font-size: 52px;
   font-weight: 400;
   margin: 0;
   text-align: center;
 }
 
 .card.text-card h2 {
-  font-size: 56px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 600;
   margin: 10px 0;
-  text-align: center;
+  text-align: left;
+  line-height: 1.6;
+  
 }
 
 .card.text-card h3 {
@@ -79,6 +81,7 @@ a.active {
   font-weight: 300;
   margin: 0;
   text-align: left;
+  line-height: 1.6;
 }
 
 .card.text-card h4 {
@@ -88,6 +91,7 @@ a.active {
   text-align: left;
   line-height: 1.6;
   font-style: italic;
+  
 }
 
 .card.carousel-card {
@@ -254,15 +258,19 @@ a.active {
   align-items: flex-start;
   text-align: center;
   display: inline-block;
+
 }
-  .card.text-card h2 {
-  font-size: 24px;
+.card.text-card h2 {
+  font-size: 12px;
   max-width: 350px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  text-align: center;
+  text-align: left;
   display: inline-block;
+  line-height: 1.6;
+  
+  
 }
 .card.text-card h3 {
   font-size: 12px;
@@ -284,5 +292,6 @@ a.active {
   display: inline-block;
   font-style: italic;
   line-height: 1.6;
+ 
 }
 }
