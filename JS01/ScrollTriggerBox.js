@@ -7,13 +7,13 @@ gsap.set(".card", {y: 200});
 // Gebruik ScrollTrigger om ".card.box" elementen in batches te verwerken
 ScrollTrigger.batch(".card", {
   // Definieer acties voor wanneer elementen in het viewport komen
-  onEnter: batch => gsap.to(batch, {opacity: 1, y: 0, duration: 3, stagger: {each: 1, grid: [1, 3]}, overwrite: true}),
+  onEnter: batch => gsap.to(batch, {opacity: 1, y: 0, duration: 2, stagger: {each: 1, grid: [1, 3]}, overwrite: true}),
   // Definieer acties voor wanneer elementen het viewport verlaten
-  onLeave: batch => gsap.to(batch, {opacity: 0, y: -200, duration: 3, overwrite: true}),
+  onLeave: batch => gsap.to(batch, {opacity: 0, y: -200, duration: 2, overwrite: true}),
   // Definieer acties voor wanneer elementen opnieuw in het viewport komen tijdens het omhoog scrollen
-  onEnterBack: batch => gsap.to(batch, {opacity: 1, y: 0, duration: 3, stagger: 1, overwrite: true}),
+  onEnterBack: batch => gsap.to(batch, {opacity: 1, y: 0, duration: 2, stagger: 1, overwrite: true}),
   // Definieer acties voor wanneer elementen het viewport verlaten tijdens het omhoog scrollen
-  onLeaveBack: batch => gsap.to(batch, {opacity: 0, y: 200, duration: 3, overwrite: true})
+  onLeaveBack: batch => gsap.to(batch, {opacity: 0, y: 200, duration: 2, overwrite: true})
 });
 
 // Luister naar het "refreshInit" evenement dat door ScrollTrigger wordt geactiveerd en reset de positie van ".card" elementen naar hun oorspronkelijke positie
