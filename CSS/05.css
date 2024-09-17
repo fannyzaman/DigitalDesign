@@ -270,8 +270,9 @@ a.active {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  text-align: center;
+  text-align: left;
   display: inline-block;
+  line-height: 1.6;
 }
 .card.text-card h4 {
   font-size: 12px;
@@ -279,8 +280,9 @@ a.active {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  text-align: center;
+  text-align: left;
   display: inline-block;
   font-style: italic;
+  line-height: 1.6;
 }
 }
