@@ -77,7 +77,7 @@ body {
 
   .card.carousel-card h1 {
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 300;
     text-align: center;
     padding: 20px 0; /* Ensure there is space around the title */
     z-index: 1001; /* Higher than the navbar */
@@ -97,7 +97,7 @@ body {
   
   .card.text-card h1 {
     font-size: 56px;
-    font-weight: 700;
+    font-weight: 300;
     margin: 0;
     text-align: center;
   }
