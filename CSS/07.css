@@ -1,0 +1,303 @@
+body {
+    font-family: 'Inconsolata', sans-serif;
+    color: #090809;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    display: inline-block;
+    font-weight: 300;
+  }
+  
+  .links {
+    display: inline-block;
+  }
+  
+  .links li {
+    display: inline-block;
+  }
+  
+  .links a {
+    color: #090809;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 8px;
+  }
+  
+  .navbar {
+    color: #090809;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    padding: 10px 32px;
+    height: 100px;
+    box-sizing: border-box;
+  }
+  
+  a.active {
+    border-bottom: 1px solid black;
+  }
+  
+  .grid-container {
+    display: flex;
+    flex-direction: column; /* Ensures items stack vertically */
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+    min-height: 100vh; /* Full viewport height to ensure vertical centering */
+    padding: 0 10%; /* Add horizontal padding */
+    box-sizing: border-box; /* Include padding in total width */
+    margin-top: 100px; /* Add space for the fixed navbar */
+}
+
+
+  
+  .card.text-card {
+    display: flex;
+    justify-content: center; /* Zorgt ervoor dat de inhoud horizontaal gecentreerd is */
+    align-items: center; /* Zorgt ervoor dat de inhoud verticaal gecentreerd is */
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+  .card.carousel-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .card.carousel-card h1 {
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px 0; /* Ensure there is space around the title */
+    z-index: 1001; /* Higher than the navbar */
+    position: relative; /* Ensure it is positioned correctly */
+    margin-top: 120px; /* Push it down below the fixed navbar */
+
+  }
+
+  .card.carousel-card h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin: 10px 0;
+    text-align: center;
+    color: grey;
+
+  }
+  
+  .card.text-card h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .card.text-card h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin: 10px 0;
+    text-align: center;
+    
+    line-height: 1.6;
+  }
+  
+  .card.text-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  .card.text-card h4 {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0;
+    text-align: left;
+    line-height: 1.6;
+  }
+  
+  .card.carousel-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Ensures the dots are stacked under the slide */
+  }
+  
+  .carousel-container {
+    
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    display: flex;
+    justify-content: top center;
+    align-items: top center;
+
+  }
+  
+  .carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%; /* Make sure the slide takes up the full height of the container */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-slide .slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .carousel-slide img {
+    width: auto; /* Adjust the width to maintain aspect ratio */
+    height: 100%;
+    max-height: 100%; /* Ensure the image doesn't exceed the slide's height */
+    max-width: 100%; /* Ensure the image doesn't exceed the slide's width */
+    display: block;
+    margin: auto; /* Center the image inside the slide */
+  }
+  
+  .carousel-dots {
+    text-align: center;
+    margin-top: 10px; /* Add margin to space the dots from the slides */
+  }
+  
+  .carousel-dots .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .carousel-dots .dot.active {
+    background-color: #717171;
+  }
+
+  /* Add larger side margins for larger screens */
+@media (min-width: 1080px) {
+    .grid-container {
+        padding: 0 20%; /* Increase left and right padding for full HD and above */
+    }
+}
+  
+  /* Responsive adjustments */
+  @media (max-width: 1080px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Switch to a single column layout */
+        margin-top: 150px; /* Adjust this value to create more space */
+    }
+  
+    .carousel-container {
+        height: auto; /* Allow the height to adjust automatically */
+    }
+  
+    .carousel-slide img {
+        width: 100%; /* Make the images scale down proportionally */
+        height: auto;
+        max-width: 100%;
+    }
+  }
+  
+  
+  @media (max-width: 800px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Switch to a single column layout */
+        margin-top: 150px; /* Adjust this value to create more space */
+    }
+  
+    .carousel-container {
+        height: auto; /* Allow the height to adjust automatically */
+        align-items: center;
+    }
+  
+    .carousel-slide img {
+        width: 100%; /* Make the images scale down proportionally */
+        height: auto;
+        max-width: 100%;
+        align-items: center;
+    }
+    .card.text-card h1 {
+      font-size: 48px;
+      max-width: 350px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: center;
+      display: inline-block;
+    }
+  }
+  
+  /* Adjust for even smaller screens if needed */
+  @media (max-width: 432px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* Switch to a single column layout */
+      margin-top: 150px; /* Adjust this value to create more space */
+  }
+  
+  .carousel-container {
+      height: auto; /* Allow the height to adjust automatically */
+      align-items: center;
+  }
+  
+  .carousel-slide img {
+      width: 100%; /* Make the images scale down proportionally */
+      height: auto;
+      max-width: 100%;
+      align-items: center;
+  }
+  .card.text-card h1 {
+    font-size: 48px;
+    max-width: 350px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+    display: inline-block;
+  }
+  }
+  
+  @media (max-width: 360px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* Switch to a single column layout */
+      margin-top: 150px; /* Adjust this value to create more space */
+  }
+  
+  .carousel-container {
+      height: auto; /* Allow the height to adjust automatically */
+      align-items: center;
+  }
+  
+  .carousel-slide img {
+      width: 100%; /* Make the images scale down proportionally */
+      height: auto;
+      max-width: 100%;
+      align-items: center;
+  }
+  .card.text-card h1 {
+    font-size: 48px;
+    max-width: 350px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+    display: inline-block;
+  }
+  }
