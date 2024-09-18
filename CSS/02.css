@@ -79,6 +79,7 @@ a.active {
   font-weight: 300;
   margin: 0;
   text-align: left;
+  line-height: 1.6;
 }
 
 .card.carousel-card {
