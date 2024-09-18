@@ -78,7 +78,7 @@ a.active {
   font-size: 16px;
   font-weight: 300;
   margin: 0;
-  text-align: center;
+  text-align: left;
 }
 
 .card.carousel-card {
@@ -216,6 +216,7 @@ a.active {
     align-items: flex-start;
     text-align: left;
     display: inline-block;
+    line-height: 1.6;
   }
 
     .card.text-card h4 {
@@ -226,5 +227,6 @@ a.active {
     align-items: flex-start;
     text-align: left;
     display: inline-block;
+    line-height: 1.6;
   }
 }
