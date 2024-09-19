@@ -61,24 +61,33 @@ a.active {
 }
 
 .card.text-card h1 {
-  font-size: 56px;
+  font-size: 64px;
   font-weight: 400;
   margin: 0;
   text-align: center;
 }
 
 .card.text-card h2 {
-  font-size: 24px;
+  font-size: 48px;
   font-weight: 400;
   margin: 10px 0;
-  text-align: left;
+  text-align: center;
 }
 
 .card.text-card h3 {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.card.text-card h4 {
   font-size: 16px;
   font-weight: 300;
   margin: 0;
   text-align: left;
+  line-height: 1.6;
 }
 
 .card.carousel-card {
@@ -197,7 +206,128 @@ a.active {
 }
 
 @media (max-width: 432px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Switch to a single column layout */
+    margin-top: 150px; /* Adjust this value to create more space */
+    gap: 20px;
+    padding: 20px;
+}
+
 .carousel-container {
-    height: 250px; /* Compact for small smartphones */
+    height: auto; /* Allow the height to adjust automatically */
+    align-items: center;
+}
+
+.carousel-slide img {
+    width: 100%; /* Make the images scale down proportionally */
+    height: auto;
+    max-width: 100%;
+    align-items: center;
+}
+.card.text-card h1 {
+  font-size: 36px;
+  max-width: 350px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: center;
+  display: inline-block;
+}
+
+.card.text-card h2 {
+  font-size: 24px;
+  max-width: 350px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: center;
+  display: inline-block;
+  line-height: 1.6;
+  
+  
+}
+.card.text-card h3 {
+  font-size: 18px;
+  max-width: 350px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  display: inline-block;
+  line-height: 1.6;
+}
+.card.text-card h4 {
+  font-size: 12px;
+  max-width: 350px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  display: inline-block;
+  line-height: 1.6;
+ 
+}
+}
+@media (max-width: 360px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Switch to a single column layout */
+    margin-top: 150px; /* Adjust this value to create more space */
+    gap: 20px;
+    padding: 20px;
+}
+
+.carousel-container {
+    height: auto; /* Allow the height to adjust automatically */
+    align-items: center;
+}
+
+.carousel-slide img {
+    width: 100%; /* Make the images scale down proportionally */
+    height: auto;
+    max-width: 100%;
+    align-items: center;
+}
+.card.text-card h1 {
+  font-size: 36px;
+  max-width: 350px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: center;
+  display: inline-block;
+}
+
+.card.text-card h2 {
+  font-size: 24px;
+  max-width: 350px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: center;
+  display: inline-block;
+  line-height: 1.6;
+  
+  
+}
+.card.text-card h3 {
+  font-size: 18px;
+  max-width: 350px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  display: inline-block;
+  line-height: 1.6;
+}
+.card.text-card h4 {
+  font-size: 12px;
+  max-width: 350px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  display: inline-block;
+  line-height: 1.6;
+ 
 }
 }
