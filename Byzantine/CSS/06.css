@@ -134,9 +134,9 @@ body, html {
   .partner {
     width: 0;
     height: 0;
-    border-left: 25px solid transparent; /* Adjust border size for triangle */
-    border-right: 25px solid transparent; /* Adjust border size for triangle */
-    border-bottom: 50px solid; /* Adjust border size for triangle */
+    border-left: 20px solid transparent; /* Adjust border size for triangle */
+    border-right: 20px solid transparent; /* Adjust border size for triangle */
+    border-bottom: 40px solid; /* Adjust border size for triangle */
     border-bottom-color: grey; /* Adjust the color dynamically using JavaScript */
     position: absolute;
     z-index: -1;
