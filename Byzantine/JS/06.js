@@ -35,7 +35,7 @@ function createPartnerNode() {
 }
 
 // Function to change Amazon color gradually from green to red
-function changeAmazonColor(amazonNode) {
+function changeAmazonColor(amazonNode, onColorChange) {
     let step = 0;
     const intervalId = setInterval(() => {
         const greenPercentage = (step + 1) * (100 / 17);
@@ -46,6 +46,7 @@ function changeAmazonColor(amazonNode) {
         step++; // Increment the step
         if (step >= 17) {
             clearInterval(intervalId); // Stop the interval after 17 steps
+            onColorChange(); // Notify when the Amazon turns red
         }
     }, 1000); // Interval of 1 second for each step
 }
@@ -53,42 +54,9 @@ function changeAmazonColor(amazonNode) {
 // Function to initialize the simulation
 function initializeSimulation() {
     const amazonContainer = document.getElementById('amazon-container');
+    amazonContainer.innerHTML = ''; // Clear existing nodes before starting
 
-    // Create and append Amazon nodes to the container
-    for (let i = 0; i < numAmazons; i++) {
-        const amazonNode = createAmazonNode();
-        amazonContainer.appendChild(amazonNode);
-        changeAmazonColor(amazonNode); // Apply gradual color change
-    }
-
-    // Create and append partner nodes to the container
-    for (let i = 0; i < numPartners; i++) {
-        const partnerNode = createPartnerNode();
-        // Add partner node styling and positioning here
-        amazonContainer.appendChild(partnerNode);
-    }
-}
-
-// Function to initialize the simulation
-function initializeSimulation() {
-    const amazonContainer = document.getElementById('amazon-container');
-
-    // Create and append Amazon nodes to the container
-    for (let i = 0; i < numAmazons; i++) {
-        const amazonNode = createAmazonNode();
-        amazonContainer.appendChild(amazonNode);
-        changeAmazonColor(amazonNode); // Apply gradual color change
-    }
-
-    // Variable to keep track of the number of red Amazons
     let redAmazonCount = 0;
-
-    // Create and append partner nodes to the container
-    for (let i = 0; i < numPartners; i++) {
-        const partnerNode = createPartnerNode();
-        // Add partner node styling and positioning here
-        amazonContainer.appendChild(partnerNode);
-    }
 
     // Function to make grey partner nodes pop
     function makeGreyPartnersPop() {
@@ -103,13 +71,27 @@ function initializeSimulation() {
         redAmazonCount++;
         if (redAmazonCount === numAmazons) {
             makeGreyPartnersPop();
+
+            // Restart the simulation after a delay (e.g., 3 seconds)
+            setTimeout(() => {
+                initializeSimulation();
+            }, 3000);
         }
     }
 
-    // Initialize event listener for Amazon color change
-    amazonContainer.addEventListener('colorChange', checkAllAmazonsRed);
+    // Create and append Amazon nodes to the container
+    for (let i = 0; i < numAmazons; i++) {
+        const amazonNode = createAmazonNode();
+        amazonContainer.appendChild(amazonNode);
+        changeAmazonColor(amazonNode, checkAllAmazonsRed); // Apply gradual color change
+    }
+
+    // Create and append partner nodes to the container
+    for (let i = 0; i < numPartners; i++) {
+        const partnerNode = createPartnerNode();
+        amazonContainer.appendChild(partnerNode);
+    }
 }
 
 // Initialize the simulation when the page is loaded
 document.addEventListener('DOMContentLoaded', initializeSimulation);
-
