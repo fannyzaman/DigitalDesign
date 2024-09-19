@@ -122,10 +122,26 @@ body, html {
       border-bottom: 60px solid; /* Adjust the color dynamically using JavaScript */
       border-bottom-color: transparent; /* Initialize as transparent */
       position: absolute;
+  } 
   }
-      
-   
+  /* Responsive adjustments */
+@media (max-width: 360px) {
+  #amazon-container {
+    height: 200px; /* Compact for small smartphones */
+
   }
+
+  .partner {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent; /* Adjust border size for triangle */
+    border-right: 25px solid transparent; /* Adjust border size for triangle */
+    border-bottom: 50px solid; /* Adjust border size for triangle */
+    border-bottom-color: grey; /* Adjust the color dynamically using JavaScript */
+    position: absolute;
+    z-index: -1;
+  }
+}
 
 
 
