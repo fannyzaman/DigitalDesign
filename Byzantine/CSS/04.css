@@ -75,7 +75,7 @@ body, html {
     }
 
     #message {
-        font-size: 80px; /* Adjust font size for smaller screens */
+        font-size: 52px; /* Adjust font size for smaller screens */
     }
 
     .node {
