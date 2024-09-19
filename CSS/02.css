@@ -237,7 +237,6 @@ a.active {
   justify-content: flex-start;
   align-items: flex-start;
   text-align: center;
-  text-align: left;
   display: inline-block;
   line-height: 1.6;
   
@@ -249,7 +248,7 @@ a.active {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  text-align: center;
+  text-align: left;
   display: inline-block;
   line-height: 1.6;
 }
@@ -277,6 +276,7 @@ a.active {
 .carousel-container {
     height: auto; /* Allow the height to adjust automatically */
     align-items: center;
+
 }
 
 .carousel-slide img {
@@ -301,7 +301,6 @@ a.active {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  text-align: center;
   text-align: center;
   display: inline-block;
   line-height: 1.6;
