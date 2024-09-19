@@ -87,3 +87,23 @@ body, html {
         position: absolute;
     }
 }
+/* Responsive adjustments */
+@media (max-width: 360px) {
+    .container {
+        width: 100vw; /* Full viewport width */
+        height: 100vh; /* Full viewport height */
+    }
+
+    #message {
+        font-size: 60px; /* Adjust font size for smaller screens */
+    }
+
+    .node {
+        width: 0;
+        height: 0;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 50px solid transparent; /* Adjust to fit the smaller size */
+        position: absolute;
+    }
+}
