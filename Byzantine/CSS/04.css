@@ -95,7 +95,7 @@ body, html {
     }
 
     #message {
-        font-size: 60px; /* Adjust font size for smaller screens */
+        font-size: 48px; /* Adjust font size for smaller screens */
     }
 
     .node {
