@@ -221,7 +221,7 @@ a.active {
     align-items: center;
 }
 .card.text-card h1 {
-  font-size: 48px;
+  font-size: 36px;
   max-width: 350px;
   display: flex;
   justify-content: flex-start;
@@ -231,7 +231,7 @@ a.active {
 }
 
 .card.text-card h2 {
-  font-size: 12px;
+  font-size: 24px;
   max-width: 350px;
   display: flex;
   justify-content: flex-start;
@@ -244,7 +244,7 @@ a.active {
   
 }
 .card.text-card h3 {
-  font-size: 12px;
+  font-size: 18px;
   max-width: 350px;
   display: flex;
   justify-content: flex-start;
@@ -261,7 +261,6 @@ a.active {
   align-items: flex-start;
   text-align: left;
   display: inline-block;
-  font-style: italic;
   line-height: 1.6;
  
 }
@@ -288,7 +287,7 @@ a.active {
     align-items: center;
 }
 .card.text-card h1 {
-  font-size: 48px;
+  font-size: 36px;
   max-width: 350px;
   display: flex;
   justify-content: flex-start;
@@ -298,7 +297,7 @@ a.active {
 }
 
 .card.text-card h2 {
-  font-size: 12px;
+  font-size: 24px;
   max-width: 350px;
   display: flex;
   justify-content: flex-start;
@@ -311,7 +310,7 @@ a.active {
   
 }
 .card.text-card h3 {
-  font-size: 12px;
+  font-size: 18px;
   max-width: 350px;
   display: flex;
   justify-content: flex-start;
@@ -328,7 +327,6 @@ a.active {
   align-items: flex-start;
   text-align: left;
   display: inline-block;
-  font-style: italic;
   line-height: 1.6;
  
 }
