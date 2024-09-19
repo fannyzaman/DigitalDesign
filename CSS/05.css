@@ -47,8 +47,8 @@ a.active {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two equal columns */
-  gap: 20px;
-  padding: 20px;
+  gap: 100px;
+  padding: 100px;
   margin-top: 110px;
 }
 
@@ -61,23 +61,21 @@ a.active {
 }
 
 .card.text-card h1 {
-  font-size: 52px;
+  font-size: 64px;
   font-weight: 400;
   margin: 0;
   text-align: center;
 }
 
 .card.text-card h2 {
-  font-size: 16px;
-  font-weight: 600;
+  font-size:48px;
+  font-weight: 400;
   margin: 10px 0;
-  text-align: left;
-  line-height: 1.6;
-  
+  text-align: center;
 }
 
 .card.text-card h3 {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 300;
   margin: 0;
   text-align: left;
@@ -90,8 +88,6 @@ a.active {
   margin: 0;
   text-align: left;
   line-height: 1.6;
-  font-style: italic;
-  
 }
 
 .card.carousel-card {
@@ -194,7 +190,7 @@ a.active {
       align-items: center;
   }
   .card.text-card h1 {
-    font-size: 40px;
+    font-size: 48px;
     max-width: 350px;
     display: flex;
     justify-content: flex-start;
@@ -258,40 +254,5 @@ a.active {
   align-items: flex-start;
   text-align: center;
   display: inline-block;
-
-}
-.card.text-card h2 {
-  font-size: 12px;
-  max-width: 350px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-  display: inline-block;
-  line-height: 1.6;
-  
-  
-}
-.card.text-card h3 {
-  font-size: 12px;
-  max-width: 350px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-  display: inline-block;
-  line-height: 1.6;
-}
-.card.text-card h4 {
-  font-size: 12px;
-  max-width: 350px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-  display: inline-block;
-  font-style: italic;
-  line-height: 1.6;
- 
 }
 }
