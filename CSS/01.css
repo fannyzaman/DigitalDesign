@@ -249,7 +249,7 @@ a.active {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  text-align: left;
+  text-align: center;
   display: inline-block;
   line-height: 1.6;
 }
@@ -315,7 +315,7 @@ a.active {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  text-align: left;
+  text-align: center;
   display: inline-block;
   line-height: 1.6;
 }
