@@ -183,7 +183,7 @@ a.active {
   }
   
   .carousel-slide img {
-      width: 100%; /* Make the images scale down proportionally */
+      width: auto; /* Make the images scale down proportionally */
       height: auto;
       max-width: 100%;
       align-items: center;
