@@ -148,6 +148,8 @@ body {
   /* Responsive adjustments */
   @media (max-width: 800px) {
     .grid-container {
+        gap: 20px;
+        padding: 20px;
         grid-template-columns: 1fr; /* Switch to a single column layout */
         margin-top: 150px; /* Adjust this value to create more space */
     }
@@ -166,6 +168,9 @@ body {
   /* Adjust for even smaller screens if needed */
   @media (max-width: 400px) {
     .grid-container {
+        gap: 20px;
+        padding: 20px;
+
         margin-top: 160px; /* Increase the margin-top for smaller screens */
     }
   
@@ -176,10 +181,11 @@ body {
   
   
     @media (max-width: 360px) {
-      .grid-container {
+      .grid-container {   
         gap: 20px;
-        padding: 20px;
-        grid-template-columns: 1fr; /* Switch to a single column layout */
+        padding: 20px; 
+          
+    grid-template-columns: 1fr; /* Switch to a single column layout */
         margin-top: 150px; /* Adjust this value to create more space */
     }
     
