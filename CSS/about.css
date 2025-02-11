@@ -79,6 +79,7 @@ a.active {
   font-weight: 300;
   margin: 0;
   text-align: left;
+  line-height: 1.6;
 }
 
 .card.carousel-card {
@@ -169,9 +170,12 @@ a.active {
   }
 
   .carousel-container {
-      height: 200px; /* Compact for small smartphones */
+      height: 250px; /* Compact for small smartphones */
   }
-    @media (max-width: 360px) {
+}
+
+
+  @media (max-width: 360px) {
     .grid-container {
       grid-template-columns: 1fr; /* Switch to a single column layout */
       margin-top: 150px; /* Adjust this value to create more space */
@@ -216,7 +220,6 @@ a.active {
     align-items: flex-start;
     text-align: left;
     display: inline-block;
-    line-height: 1.6;
   }
 
     .card.text-card h4 {
@@ -227,6 +230,5 @@ a.active {
     align-items: flex-start;
     text-align: left;
     display: inline-block;
-    line-height: 1.6;
   }
 }
