@@ -177,6 +177,8 @@ body {
   
     @media (max-width: 360px) {
       .grid-container {
+        gap: 20px;
+        padding: 20px;
         grid-template-columns: 1fr; /* Switch to a single column layout */
         margin-top: 150px; /* Adjust this value to create more space */
     }
