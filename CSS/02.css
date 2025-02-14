@@ -3,6 +3,7 @@ body {
   color: #090809;
   margin: 0;
   padding: 0;
+  background-color: #c8c5d7;
 }
 
 h1 {
@@ -143,14 +144,14 @@ a.active {
   height: 12px;
   width: 12px;
   margin: 0 5px;
-  background-color: #bbb;
+  background-color: white;;
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
 }
 
 .carousel-dots .dot.active {
-  background-color: #717171;
+  background-color: black;
 }
 
 /* Responsive adjustments */
@@ -276,7 +277,6 @@ a.active {
 .carousel-container {
     height: auto; /* Allow the height to adjust automatically */
     align-items: center;
-
 }
 
 .carousel-slide img {
