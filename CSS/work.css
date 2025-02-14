@@ -195,7 +195,7 @@ a.active {
   display: inline-block;
 }
 .carousel-slide h2 {
-  font-size: 32px;
+  font-size: 24px;
   display: flex;
   justify-content: center; /* Centers horizontally */
   align-items: center; /* Centers vertically */
