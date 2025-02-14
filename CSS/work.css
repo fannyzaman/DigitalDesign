@@ -12,6 +12,7 @@ h1 {
   font-weight: 300;
 }
 
+
 .links {
   display: inline-block;
 }
@@ -55,9 +56,7 @@ a.active {
   gap: 1px;
   padding: 1px;
   margin-top: 160px;
-  
-  
-}
+  }
 
 .card {
   
@@ -122,8 +121,9 @@ a.active {
   
 }
 
-.carousel-slide h2, h3,
-.carousel-slide h4 {
+.carousel-slide h2
+ {
+  font-size: 32px;
   width: 100%;
   text-align: center;
   display: flex;
@@ -155,6 +155,23 @@ a.active {
   background-color: #717171;
 }
 
+@media (max-width: 1080px) {
+  .grid-container {
+      grid-template-columns: 1fr; /* Switch to a single column layout */
+      margin-top: 150px; /* Adjust this value to create more space */
+  }
+
+  .carousel-container {
+      height: auto; /* Allow the height to adjust automatically */
+  }
+
+  .carousel-slide img {
+      width: 100%; /* Make the images scale down proportionally */
+      height: auto;
+      max-width: 100%;
+  }
+}
+
 /* Adjust for even smaller screens if needed */
 @media (max-width: 800px)
 {
@@ -184,15 +201,6 @@ a.active {
     height: auto;
     max-width: 100%;
     align-items: center;
-}
-.carousel-slide h1 {
-  font-size: 48px;
-  max-width: 350px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: center;
-  display: inline-block;
 }
 .carousel-slide h2 {
   font-size: 24px;
@@ -235,15 +243,7 @@ a.active {
     max-width: 100%;
     align-items: center;
 }
-.carousel-slide h1 {
-  font-size: 48px;
-  max-width: 350px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: center;
-  display: inline-block;
-}
+
 .carousel-slide h2 {
   font-size: 24px;
   display: flex;
@@ -273,15 +273,7 @@ a.active {
     max-width: 100%;
     align-items: center;
 }
-.carousel-slide h1 {
-  font-size: 48px;
-  max-width: 350px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: center;
-  display: inline-block;
-}
+
 .carousel-slide h2 {
   font-size: 24px;
   display: flex;
