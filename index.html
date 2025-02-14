@@ -1,124 +1,235 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CSS Basics</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-  <link rel="stylesheet" href="CSS/work.css" /> <!-- link hier je css file -->
-</head>
-<body>
-  <header class="navbar">
-    <h1>Digital Design | Fanny Zaman</h1>
-    <nav class="links">
-      <ul>
-        <li><a class="active" href="index.html">Work</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="https://trope-editions.blogspot.com" target="_blank">Blog</a></li>
-      </ul>
-    </nav>
-  </header>
-  <section class="grid-container">
+body {
+  font-family: 'Inconsolata', sans-serif;
+  color: black;
+  margin: 0;
+  padding: 0;
+  background-color: #ebf1b6;
+}
 
-    <div class="card">
-      <a href="./quantum.html">
-      <div class="carousel-container" id="carousel-1">
-        <div class="carousel-slide">
-          <div class="slide">
-            <h2>Quantum Manipulations 2025</h2>
-          </div>
-     </div>
-    </div>
-    </a>
-    </div>
+h1 {
+  font-size: 48px;
+  display: inline-block;
+  font-weight: 300;
+}
 
+.links {
+  display: inline-block;
+}
+
+.links li {
+  display: inline-block;
+}
+
+.links a {
+  color: #090809;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0 8px;
+}
+
+h2 {
+  font-size: 16px;
+  display: inline-block;
+  font-weight: 300;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 32px;
+  height: 160px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+a.active {
+  border-bottom: 1px solid black;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(300px, auto); /* Rows adjust automatically */
+  gap: 1px;
+  padding: 1px;
+  margin-top: 160px;
   
-    <div class="card">
-      <a href="./01.html"> <!-- Wrap the slides content in the anchor tag -->
-      <div class="carousel-container" id="carousel-2">
-        <div class="carousel-slide">
-              <div class="slide">
-                <img src="Works/helm_masker/helm1_Tekengebied 1.webp" alt="Image 1">
-              </div>
-          </div>
-        </div>
-        </a>
-      </div>
-    
-<div class="card">
-  <a href="./02.html">
-    <div class="carousel-container" id="carousel-3">
-      <div class="carousel-slide">
-        <div class="slide">
-          <img src="Works/waarzegger/waarzeggerfront_Tekengebied 1.webp" alt="Image 1">
-        </div>
-
-    </div>
-  </div>
-  </a>
-
-</div>
-
-
-<div class="card" onclick="window.location.href='03.html'">
-  <div class="carousel-container" id="carousel-4">
-    <div class="carousel-slide">
-      <div class="slide">
-        <iframe src="Byzantine_front.html" frameborder="0" class="embedded-page"></iframe>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<div class="card">
-  <a href="./05.html">
-  <div class="carousel-container" id="carousel-5">
-    <div class="carousel-slide">
-      <div class="slide">
-        <h2>THE FUTURE IS CODED 2020</h2>
-      </div>
- </div>
-</div>
-</a>
-</div>
-
-
-<div class="card">
-  <a href="./07.html"> <!-- Wrap the slides content in the anchor tag -->
-  <div class="carousel-container" id="carousel-6">
-    <div class="carousel-slide">
-          <div class="slide">
-            <h2>Blue is nice, red is better 2022</h2>
-          </div>
-        </div>
-    </div>
-    </a> 
-
-  </div>
-
-  <div class="card">
-    <a href="./08.html"> <!-- Wrap the slides content in the anchor tag -->
-    <div class="carousel-container" id="carousel-7">
-      <div class="carousel-slide">
-            <div class="slide">
-              <h2>Doppelgängers: A Journey into the Boundaries of Digital Empathy 2024</h2>
-            </div>
   
-        </div>
-      </div>
-      </a>
-     </div>
+}
+
+.card {
+  
+  border-radius: 0px;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+  cursor: pointer;
+  background-color: white;
+}
+
+.card a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 360px;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-slide .slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden; /* Ensures no scrollbars on the slide */
+}
+
+.carousel-slide .slide.active {
+  display: flex;
+}
+
+.carousel-slide img {
+  width: 80%;
+  height: auto;
+}
+
+.embedded-page {
+  width: 100%;
+  height: 100%;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  pointer-events: none;
+  box-sizing: border-box;
+  transform: scale(0.8); /* Scale down the iframe to 80% of its original size */
+  
+}
+
+.carousel-slide h2, h3,
+.carousel-slide h4 {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.carousel-dots .dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+  background-color: #717171;
+}
+
+/* Adjust for even smaller screens if needed */
+@media (max-width: 432px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Switch to a single column layout */
+    margin-top: 160px; /* Adjust this value to create more space */
+}
+
+.carousel-container {
+    height: auto; /* Allow the height to adjust automatically */
+    align-items: center;
+}
+
+.carousel-slide img {
+    width: 100%; /* Make the images scale down proportionally */
+    height: auto;
+    max-width: 100%;
+    align-items: center;
+}
+.carousel-slide h1 {
+  font-size: 48px;
+  max-width: 350px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: center;
+  display: inline-block;
+}
+.carousel-slide h2 {
+  font-size: 48px;
+  max-width: 350px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: center;
+  display: inline-block;
+}
+
+}
+
+@media (max-width: 360px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Switch to a single column layout */
+    margin-top: 160px; /* Adjust this value to create more space */
+}
+
+.carousel-container {
+    height: auto; /* Allow the height to adjust automatically */
+    align-items: center;
+}
+
+.carousel-slide img {
+    width: 100%; /* Make the images scale down proportionally */
+    height: auto;
+    max-width: 100%;
+    align-items: center;
+}
+.carousel-slide h1 {
+  font-size: 48px;
+  max-width: 350px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: center;
+  display: inline-block;
+}
+.carousel-slide h2 {
+  font-size: 48px;
+  max-width: 350px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: center;
+  display: inline-block;
+}
+}
 
 
-</section>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="./JS01/ScrollTriggerBox.js"></script> 
-  <script src="./JS01/carousel.js"></script>
-</body>
-</html>
