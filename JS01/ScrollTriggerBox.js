@@ -11,9 +11,9 @@ ScrollTrigger.batch(".card", {
   // Definieer acties voor wanneer elementen het viewport verlaten
   onLeave: batch => gsap.to(batch, {opacity: 0, y: -200, duration: 1, overwrite: true}),
   // Definieer acties voor wanneer elementen opnieuw in het viewport komen tijdens het omhoog scrollen
-  onEnterBack: batch => gsap.to(batch, {opacity: 1, y: 0, duration: 1, stagger: 1, overwrite: true}),
+  onEnterBack: batch => gsap.to(batch, {opacity: 1, y: 0, duration: 0.5, stagger: 1, overwrite: true}),
   // Definieer acties voor wanneer elementen het viewport verlaten tijdens het omhoog scrollen
-  onLeaveBack: batch => gsap.to(batch, {opacity: 0, y: 200, duration: 1, overwrite: true})
+  onLeaveBack: batch => gsap.to(batch, {opacity: 0, y: 200, duration: 0.5, overwrite: true})
 });
 
 // Luister naar het "refreshInit" evenement dat door ScrollTrigger wordt geactiveerd en reset de positie van ".card" elementen naar hun oorspronkelijke positie
