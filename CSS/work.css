@@ -1,13 +1,12 @@
 body {
   font-family: 'Inconsolata', sans-serif;
-  color: black;
+  color: #090809;
   margin: 0;
   padding: 0;
-  background-color: #ebf1b6;
+  background-color: #c8c5d7;
 }
 
 h1 {
-  font-size: 48px;
   display: inline-block;
   font-weight: 300;
 }
@@ -30,14 +29,18 @@ h1 {
 
 
 .navbar {
+  color: #090809;
+  margin: 0;
+  padding: 0;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  background-color: white;
   z-index: 1000;
+  padding: 10px 32px;
   height: 160px;
   box-sizing: border-box;
-  background-color: white;
 }
 
 a.active {
