@@ -39,7 +39,6 @@ h2 {
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 10px 32px;
   height: 160px;
   box-sizing: border-box;
   background-color: white;
@@ -52,7 +51,7 @@ a.active {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(300px, auto); /* Rows adjust automatically */
+  grid-auto-rows: minmax(400px, auto); /* Rows adjust automatically */
   gap: 1px;
   padding: 1px;
   margin-top: 160px;
@@ -166,7 +165,7 @@ a.active {
     width: 100%;
     z-index: 1000;
     padding: 24px 32px;
-    height: 150px;
+    height: 200px;
     box-sizing: border-box;
     background-color: white;
   }
