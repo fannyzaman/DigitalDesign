@@ -157,10 +157,22 @@ a.active {
 }
 
 /* Adjust for even smaller screens if needed */
-@media (max-width: 432px) {
+@media (max-width: 800px)
+{
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 24px 32px;
+    height: 200px;
+    box-sizing: border-box;
+    background-color: white;
+  }
   .grid-container {
     grid-template-columns: 1fr; /* Switch to a single column layout */
-    margin-top: 160px; /* Adjust this value to create more space */
+    margin-top: 200px; /* Adjust this value to create more space */
 }
 
 .carousel-container {
@@ -184,13 +196,13 @@ a.active {
   display: inline-block;
 }
 .carousel-slide h2 {
-  font-size: 48px;
-  max-width: 350px;
+  font-size: 32px;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: center;
-  display: inline-block;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 30vh; /* Adjust height as needed */
+  text-align: center; /* Ensures text is centered */
+
 }
 
 }
@@ -198,7 +210,7 @@ a.active {
 @media (max-width: 360px) {
   .grid-container {
     grid-template-columns: 1fr; /* Switch to a single column layout */
-    margin-top: 160px; /* Adjust this value to create more space */
+    margin-top: 500px; /* Adjust this value to create more space */
 }
 
 .carousel-container {
