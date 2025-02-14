@@ -165,7 +165,7 @@ a.active {
     width: 100%;
     z-index: 1000;
     padding: 24px 32px;
-    height: 250px;
+    height: 200px;
     box-sizing: border-box;
     background-color: white;
   }
@@ -245,7 +245,7 @@ a.active {
   display: inline-block;
 }
 .carousel-slide h2 {
-  font-size: 32px;
+  font-size: 24px;
   display: flex;
   justify-content: center; /* Centers horizontally */
   align-items: center; /* Centers vertically */
@@ -283,13 +283,13 @@ a.active {
   display: inline-block;
 }
 .carousel-slide h2 {
-  font-size: 48px;
-  max-width: 350px;
+  font-size: 24px;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: center;
-  display: inline-block;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 30vh; /* Adjust height as needed */
+  text-align: center; /* Ensures text is centered */
+
 }
 }
 
