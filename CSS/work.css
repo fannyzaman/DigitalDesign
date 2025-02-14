@@ -58,13 +58,14 @@ a.active {
 
 .card {
   
-  border-radius: 0px;
+  border-radius: px;
   overflow: hidden;
   padding: 0;
   text-align: center;
   transition: opacity 0.5s ease-in-out;
   cursor: pointer;
   background-color: white;
+  border: 5px solid #c8c5d7;
 }
 
 .card a {
@@ -168,6 +169,15 @@ a.active {
       width: 100%; /* Make the images scale down proportionally */
       height: auto;
       max-width: 100%;
+  }
+  .carousel-slide h2 {
+    font-size: 24px;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 30vh; /* Adjust height as needed */
+    text-align: center; /* Ensures text is centered */
+  
   }
 }
 
