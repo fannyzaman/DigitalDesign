@@ -183,6 +183,16 @@ a.active {
   text-align: center;
   display: inline-block;
 }
+.carousel-slide h2 {
+  font-size: 48px;
+  max-width: 350px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: center;
+  display: inline-block;
+}
+
 }
 
 @media (max-width: 360px) {
@@ -203,6 +213,15 @@ a.active {
     align-items: center;
 }
 .carousel-slide h1 {
+  font-size: 48px;
+  max-width: 350px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: center;
+  display: inline-block;
+}
+.carousel-slide h2 {
   font-size: 48px;
   max-width: 350px;
   display: flex;
