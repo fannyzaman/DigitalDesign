@@ -3,6 +3,8 @@ body {
   color: #090809;
   margin: 0;
   padding: 0;
+  padding: 0;
+
 }
 
 h1 {
@@ -74,8 +76,8 @@ a.active {
   text-align: center;
 }
 
-.card.text-card h3 {
-  font-size: 16px;
+.card.text-card h4 {
+  font-size: 18px;
   font-weight: 300;
   margin: 0;
   text-align: left;
@@ -223,7 +225,7 @@ a.active {
   }
 
     .card.text-card h4 {
-    font-size: 12px;
+    font-size: 18px;
     max-width: 350px;
     display: flex;
     justify-content: flex-start;
