@@ -83,7 +83,7 @@ body {
   }
   
   .card.text-card h4 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
     margin: 0;
     text-align: left;
@@ -143,14 +143,14 @@ body {
     height: 12px;
     width: 12px;
     margin: 0 5px;
-    background-color: #bbb;
+    background-color: white;;
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
   }
   
   .carousel-dots .dot.active {
-    background-color: #717171;
+    background-color: black;
   }
   
   /* Responsive adjustments */
@@ -253,7 +253,7 @@ body {
     line-height: 1.6;
   }
   .card.text-card h4 {
-    font-size: 12px;
+    font-size: 18px;
     max-width: 350px;
     display: flex;
     justify-content: flex-start;
@@ -317,7 +317,7 @@ body {
     line-height: 1.6;
   }
   .card.text-card h4 {
-    font-size: 12px;
+    font-size: 18px;
     max-width: 350px;
     display: flex;
     justify-content: flex-start;
