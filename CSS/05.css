@@ -3,6 +3,8 @@ body {
   color: #090809;
   margin: 0;
   padding: 0;
+  padding: 0;
+  background-color: #c8c5d7;
 }
 
 h1 {
@@ -83,7 +85,7 @@ a.active {
 }
 
 .card.text-card h4 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   margin: 0;
   text-align: left;
@@ -134,24 +136,20 @@ a.active {
   margin: auto; /* Center the image inside the slide */
 }
 
-.carousel-dots {
-  text-align: center;
-  margin-top: 10px; /* Add margin to space the dots from the slides */
-}
-
 .carousel-dots .dot {
   height: 12px;
   width: 12px;
   margin: 0 5px;
-  background-color: #bbb;
+  background-color: white;;
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
 }
 
 .carousel-dots .dot.active {
-  background-color: #717171;
+  background-color: black;
 }
+
 
 /* Responsive adjustments */
 @media (max-width: 1080px) {
@@ -253,7 +251,7 @@ a.active {
   line-height: 1.6;
 }
 .card.text-card h4 {
-  font-size: 12px;
+  font-size: 18px;
   max-width: 350px;
   display: flex;
   justify-content: flex-start;
@@ -276,7 +274,6 @@ a.active {
 .carousel-container {
     height: auto; /* Allow the height to adjust automatically */
     align-items: center;
-
 }
 
 .carousel-slide img {
@@ -318,7 +315,7 @@ a.active {
   line-height: 1.6;
 }
 .card.text-card h4 {
-  font-size: 12px;
+  font-size: 18px;
   max-width: 350px;
   display: flex;
   justify-content: flex-start;
