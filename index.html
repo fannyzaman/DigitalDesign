@@ -1,3 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Basics</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <link rel="stylesheet" href="CSS/work.css" /> <!-- link hier je css file -->
+</head>
+<body>
+  <header class="navbar">
+    <h1>Digital Design | Fanny Zaman</h1>
+    <nav class="links">
+      <ul>
+        <li><a class="active" href="index.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://trope-editions.blogspot.com" target="_blank">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="grid-container">
+
     <div class="card">
       <a href="./quantum.html">
       <div class="carousel-container" id="carousel-1">
@@ -10,3 +34,94 @@
     </div>
     </a>
     </div>
+
+  
+    <div class="card">
+      <a href="./01.html"> <!-- Wrap the slides content in the anchor tag -->
+      <div class="carousel-container" id="carousel-2">
+        <div class="carousel-slide">
+              <div class="slide">
+                <img src="Works/helm_masker/helm1_Tekengebied 1.webp" alt="Image 1">
+              </div>
+          </div>
+        </div>
+        </a>
+      </div>
+    
+<div class="card">
+  <a href="./02.html">
+    <div class="carousel-container" id="carousel-3">
+      <div class="carousel-slide">
+        <div class="slide">
+          <img src="Works/waarzegger/waarzeggerfront_Tekengebied 1.webp" alt="Image 1">
+        </div>
+
+    </div>
+  </div>
+  </a>
+
+</div>
+
+
+<div class="card" onclick="window.location.href='03.html'">
+  <div class="carousel-container" id="carousel-4">
+    <div class="carousel-slide">
+      <div class="slide">
+        <iframe src="Byzantine_front.html" frameborder="0" class="embedded-page"></iframe>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="card">
+  <a href="./05.html">
+  <div class="carousel-container" id="carousel-5">
+    <div class="carousel-slide">
+      <div class="slide">
+        <h2><a class="active" href="05.html">THE FUTURE IS CODED 2020</a></h2>
+      </div>
+ </div>
+</div>
+</a>
+</div>
+
+
+<div class="card">
+  <a href="./07.html"> <!-- Wrap the slides content in the anchor tag -->
+  <div class="carousel-container" id="carousel-6">
+    <div class="carousel-slide">
+          <div class="slide">
+            <h2><a class="active" href="07.html">Blue is nice, red is better 2022</a></h2>
+
+          </div>
+        </div>
+    </div>
+    </a> 
+
+  </div>
+
+  <div class="card">
+    <a href="./08.html"> <!-- Wrap the slides content in the anchor tag -->
+    <div class="carousel-container" id="carousel-7">
+      <div class="carousel-slide">
+            <div class="slide">
+              <h2><a class="active" href="08.html">Doppelgängers 2024</a></h2>
+  
+            </div>
+          </div>
+      </div>
+      </a>
+     </div>
+
+
+</section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="./JS01/ScrollTriggerBox.js"></script> 
+  <script src="./JS01/carousel.js"></script>
+</body>
+</html>
+
