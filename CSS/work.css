@@ -135,6 +135,18 @@ a.active {
   box-sizing: border-box;
   background: rgba(255, 255, 255, 0.8);
 }
+.carousel-slide h3
+ {
+  font-size: 24px;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 150%;
+
+}
 
 .carousel-dots {
   text-align: center;
@@ -172,6 +184,15 @@ a.active {
   }
   .carousel-slide h2 {
     font-size: 24px;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 30vh; /* Adjust height as needed */
+    text-align: center; /* Ensures text is centered */
+  
+  }
+  .carousel-slide h3 {
+    font-size: 18px;
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
