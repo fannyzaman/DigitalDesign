@@ -91,12 +91,15 @@ a.active {
 .carousel-slide .slide {
   min-width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
   box-sizing: border-box;
   overflow: hidden; /* Ensures no scrollbars on the slide */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center;
 }
+
 
 .carousel-slide .slide.active {
   display: flex;
@@ -120,33 +123,35 @@ a.active {
   
 }
 
-.carousel-slide h2
- {
+
+.carousel-slide h2,
+.carousel-slide h3,
+.carousel-slide h4 {
+  width: 100%; 
+  text-align: center;
+  margin: 0;
+  padding: 10px; /* Optional: adds some spacing */
+  box-sizing: border-box;
+}
+
+.carousel-slide h2 {
   font-size: 32px;
   font-weight: 300;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  margin: 0;
-  padding: 0 10px;
-  box-sizing: border-box;
   background: rgba(255, 255, 255, 0.8);
 }
-.carousel-slide h3
- {
-  font-size: 24px;
-  font-weight: 300;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 150%;
 
+.carousel-slide h3 {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 150%;
 }
+
+.carousel-slide h4 {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: right; 
+}
+
 
 .carousel-dots {
   text-align: center;
@@ -183,24 +188,27 @@ a.active {
       max-width: 100%;
   }
   .carousel-slide h2 {
-    font-size: 24px;
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    height: 30vh; /* Adjust height as needed */
-    text-align: center; /* Ensures text is centered */
-  
+    font-size: 32px;
+    font-weight: 300;
+    background: rgba(255, 255, 255, 0.8);
   }
-  .carousel-slide h3 {
-    font-size: 18px;
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    height: 30vh; /* Adjust height as needed */
-    text-align: center; /* Ensures text is centered */
   
+  .carousel-slide h3 {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 150%;
+  }
+  
+  .carousel-slide h4 {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: right; 
+  }
+  .embedded-page {
+    height: 300px; /* Slightly reduce height on smaller screens */
   }
 }
+
 
 /* Adjust for even smaller screens if needed */
 @media (max-width: 800px)
@@ -233,14 +241,24 @@ a.active {
     align-items: center;
 }
 .carousel-slide h2 {
-  font-size: 24px;
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  height: 30vh; /* Adjust height as needed */
-  text-align: center; /* Ensures text is centered */
-
+  font-size: 32px;
+  font-weight: 300;
+  background: rgba(255, 255, 255, 0.8);
 }
+
+.carousel-slide h3 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+.carousel-slide h4 {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: right; 
+}
+
+
 
 }
 
@@ -275,13 +293,27 @@ a.active {
 }
 
 .carousel-slide h2 {
-  font-size: 24px;
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  height: 30vh; /* Adjust height as needed */
-  text-align: center; /* Ensures text is centered */
+  font-size: 32px;
+  font-weight: 300;
+  background: rgba(255, 255, 255, 0.8);
+}
 
+.carousel-slide h3 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+.carousel-slide h4 {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.6); /* Optional: makes text more readable */
+  padding: 5px 10px;
+  border-radius: 4px;
 }
 
 }
@@ -305,13 +337,27 @@ a.active {
 }
 
 .carousel-slide h2 {
-  font-size: 24px;
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  height: 30vh; /* Adjust height as needed */
-  text-align: center; /* Ensures text is centered */
+  font-size: 32px;
+  font-weight: 300;
+  background: rgba(255, 255, 255, 0.8);
+}
 
+.carousel-slide h3 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+.carousel-slide h4 {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.6); /* Optional: makes text more readable */
+  padding: 5px 10px;
+  border-radius: 4px;
 }
 }
 
