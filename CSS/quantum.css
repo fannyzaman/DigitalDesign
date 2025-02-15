@@ -74,8 +74,8 @@ body {
     text-align: center;
   }
   
-  .card.text-card h3 {
-    font-size: 16px;
+  .card.text-card h4 {
+    font-size: 18px;
     font-weight: 300;
     margin: 0;
     text-align: left;
@@ -220,8 +220,8 @@ body {
       display: inline-block;
     }
   
-      .card.text-card h3 {
-      font-size: 16px;
+      .card.text-card h4 {
+      font-size: 18px;
       max-width: 350px;
       display: flex;
       justify-content: flex-start;
@@ -230,13 +230,4 @@ body {
       display: inline-block;
     }
   
-      .card.text-card h4 {
-      font-size: 12px;
-      max-width: 350px;
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      text-align: left;
-      display: inline-block;
-    }
   }
