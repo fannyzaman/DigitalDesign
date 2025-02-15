@@ -83,7 +83,7 @@ a.active {
 }
 
 .card.text-card h4 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   margin: 0;
   text-align: left;
@@ -256,7 +256,7 @@ a.active {
   line-height: 1.6;
 }
 .card.text-card h4 {
-  font-size: 12px;
+  font-size: 18px;
   max-width: 350px;
   display: flex;
   justify-content: flex-start;
@@ -331,7 +331,7 @@ a.active {
   line-height: 1.6;
 }
 .card.text-card h4 {
-  font-size: 12px;
+  font-size: 18px;
   max-width: 350px;
   display: flex;
   justify-content: flex-start;
