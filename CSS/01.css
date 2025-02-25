@@ -91,6 +91,16 @@ a.active {
   line-height: 1.6;
 }
 
+.aspect-ratio-box  {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .card.carousel-card {
   display: flex;
   justify-content: center;
