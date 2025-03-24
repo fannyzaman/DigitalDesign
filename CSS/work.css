@@ -11,7 +11,6 @@ h1 {
   font-weight: 300;
 }
 
-
 .links {
   display: inline-block;
 }
@@ -27,11 +26,8 @@ h1 {
   margin: 0 8px;
 }
 
-
 .navbar {
   color: #090809;
-  margin: 0;
-  padding: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -47,38 +43,59 @@ a.active {
   border-bottom: 1px solid black;
 }
 
+/* Grid layout with equal height cards */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(400px, auto); /* Rows adjust automatically */
-  gap: 1px;
-  padding: 1px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  padding: 10px;
   margin-top: 160px;
-  }
+  align-items: stretch; /* Ensures equal height */
+}
 
 .card {
-  
-  border-radius: px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensure it takes full height */
+  background-color: white;
+  border: 5px solid #c8c5d7;
   padding: 0;
   text-align: center;
   transition: opacity 0.5s ease-in-out;
   cursor: pointer;
-  background-color: white;
-  border: 5px solid #c8c5d7;
+  box-sizing: border-box; /* Ensure padding is included in height calculation */
 }
+.card .text-container {
+  flex: 1; /* This allows the text container to take up available space */
+}
+
+
 
 .card a {
   display: block;
   color: inherit;
   text-decoration: none;
 }
+/* Ensure images inside .card, .grid-item, and .carousel-slide scale properly */
+.card img,
+.grid-item img,
+.carousel-slide img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 
+
+/* Carousel adjustments */
 .carousel-container {
   position: relative;
   width: 100%;
   overflow: hidden;
   height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .carousel-slide {
@@ -91,23 +108,16 @@ a.active {
 .carousel-slide .slide {
   min-width: 100%;
   display: flex;
-  position: relative;
-  box-sizing: border-box;
-  overflow: hidden; /* Ensures no scrollbars on the slide */
-  flex-direction: column; /* Stack elements vertically */
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-
-.carousel-slide .slide.active {
-  display: flex;
-}
-
 .carousel-slide img {
-  width: 80%;
+  max-width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 .embedded-page {
@@ -119,29 +129,28 @@ a.active {
   overflow: hidden;
   pointer-events: none;
   box-sizing: border-box;
-  transform: scale(0.8); /* Scale down the iframe to 80% of its original size */
-  
+  transform: scale(0.8);
 }
 
-
+/* Responsive typography */
 .carousel-slide h2,
 .carousel-slide h3,
 .carousel-slide h4 {
-  width: 100%; 
+  width: 100%;
   text-align: center;
   margin: 0;
-  padding: 10px; /* Optional: adds some spacing */
+  padding: 10px;
   box-sizing: border-box;
 }
 
 .carousel-slide h2 {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 300;
   background: rgba(255, 255, 255, 0.8);
 }
 
 .carousel-slide h3 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 150%;
 }
@@ -149,216 +158,111 @@ a.active {
 .carousel-slide h4 {
   font-size: 18px;
   font-weight: 300;
-  text-align: right; 
+  text-align: right;
 }
 
-
-.carousel-dots {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.carousel-dots .dot {
-  height: 10px;
-  width: 10px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  cursor: pointer;
-}
 
 .carousel-dots .dot.active {
   background-color: #717171;
 }
 
+/* Responsive Styles */
 @media (max-width: 1080px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
-      margin-top: 150px; /* Adjust this value to create more space */
+    margin-top: 150px;
   }
 
   .carousel-container {
-      height: auto; /* Allow the height to adjust automatically */
+    height: auto;
   }
 
   .carousel-slide img {
-      width: 100%; /* Make the images scale down proportionally */
-      height: auto;
-      max-width: 100%;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
   }
+
   .carousel-slide h2 {
     font-size: 32px;
-    font-weight: 300;
-    background: rgba(255, 255, 255, 0.8);
   }
-  
+
   .carousel-slide h3 {
     font-size: 18px;
-    font-weight: 300;
-    line-height: 150%;
   }
-  
+
   .carousel-slide h4 {
     font-size: 18px;
-    font-weight: 300;
-    text-align: right; 
   }
+
   .embedded-page {
-    height: 300px; /* Slightly reduce height on smaller screens */
+    height: 300px;
   }
 }
 
-
-/* Adjust for even smaller screens if needed */
-@media (max-width: 800px)
-{
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 24px 32px;
-    height: 200px;
-    box-sizing: border-box;
-    background-color: white;
-  }
+/* Adjust for even smaller screens */
+@media (max-width: 800px) {
   .grid-container {
-    grid-template-columns: 1fr; /* Switch to a single column layout */
-    margin-top: 200px; /* Adjust this value to create more space */
-}
-
-.carousel-container {
-    height: auto; /* Allow the height to adjust automatically */
-    align-items: center;
-}
-
-.carousel-slide img {
-    width: 100%; /* Make the images scale down proportionally */
-    height: auto;
-    max-width: 100%;
-    align-items: center;
-}
-.carousel-slide h2 {
-  font-size: 32px;
-  font-weight: 300;
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.carousel-slide h3 {
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 150%;
-}
-
-.carousel-slide h4 {
-  font-size: 18px;
-  font-weight: 300;
-  text-align: right; 
-}
-
-
-
-}
-
-@media (max-width: 432px)
-{
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 24px 32px;
-    height: 200px;
-    box-sizing: border-box;
-    background-color: white;
+    grid-template-columns: 1fr;
   }
-  .grid-container {
-    grid-template-columns: 1fr; /* Switch to a single column layout */
-    margin-top: 200px; /* Adjust this value to create more space */
-}
 
-.carousel-container {
-    height: auto; /* Allow the height to adjust automatically */
+  .card {
+    height: auto; /* Allow flexible height */
+  }
+
+  .grid-item {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
     align-items: center;
-}
+    justify-content: center;
+    text-align: center;
+    background: lightgray;
+    border: 1px solid black;
+  }
 
-.carousel-slide img {
-    width: 100%; /* Make the images scale down proportionally */
-    height: auto;
+  .grid-item img {
     max-width: 100%;
-    align-items: center;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  
 }
 
-.carousel-slide h2 {
-  font-size: 32px;
-  font-weight: 300;
-  background: rgba(255, 255, 255, 0.8);
-}
+/* Mobile Layout */
+@media (max-width: 432px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    margin-top: 200px;
+  }
 
-.carousel-slide h3 {
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 150%;
-}
+  .grid-item {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
 
-.carousel-slide h4 {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  font-size: 18px;
-  font-weight: 300;
-  text-align: right;
-  background: rgba(255, 255, 255, 0.6); /* Optional: makes text more readable */
-  padding: 5px 10px;
-  border-radius: 4px;
-}
-
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 @media (max-width: 360px) {
   .grid-container {
-    grid-template-columns: 1fr; /* Switch to a single column layout */
-    margin-top: 500px; /* Adjust this value to create more space */
-}
+    gap: 8px;
+    margin-top: 500px;
+  }
 
-.carousel-container {
-    height: auto; /* Allow the height to adjust automatically */
-    align-items: center;
-}
+  .grid-item {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
 
-.carousel-slide img {
-    width: 100%; /* Make the images scale down proportionally */
-    height: auto;
-    max-width: 100%;
-    align-items: center;
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
-
-.carousel-slide h2 {
-  font-size: 32px;
-  font-weight: 300;
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.carousel-slide h3 {
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 150%;
-}
-
-.carousel-slide h4 {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  font-size: 18px;
-  font-weight: 300;
-  text-align: right;
-  background: rgba(255, 255, 255, 0.6); /* Optional: makes text more readable */
-  padding: 5px 10px;
-  border-radius: 4px;
-}
-}
-
-
